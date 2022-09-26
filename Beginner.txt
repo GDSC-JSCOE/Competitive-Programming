@@ -1,0 +1,49 @@
+1. Write a program that asks the user for their name and greets them with their name.
+
+2. Modify the previous program (i.e. Q.1) such that only the users Alice and Bob are greeted with their names.
+
+3. Write a program that asks the user for a number n and prints the sum of the numbers 1 to n
+
+4. Modify the previous program (i.e. Q.3) such that only multiples of three or five are considered in the sum, e.g. 3, 5, 6, 9, 10, 12, 15 for n=17
+
+5. Write a program that asks the user for a number n and gives them the possibility to choose between computing the sum and computing the product of 1,…,n.
+
+6. Write a program that prints a multiplication table for numbers up to 12.
+
+7. Write a program that prints all prime numbers between 2 numbers. 
+
+8. Write a program that prints the next 20 leap years.
+
+9. Write a function that returns the largest element in a array.
+
+10. Write a function that checks whether an element occurs in a array.
+
+11. Write a function that returns the elements on odd positions in a list.
+
+12. Write three functions that compute the sum of the numbers in a array: using a for-loop, a while-loop and recursion.
+
+13. Write a function that concatenates two arrays. [a,b,c], [1,2,3] → [a,b,c,1,2,3]
+
+14. Write a function that merges two sorted into a new sorted list. [1,4,6],[2,3,5] → [1,2,3,4,5,6]. You can do this quicker than concatenating them followed by a sort.
+
+15. Write a function that computes the list of the first n Fibonacci numbers. The first two Fibonacci numbers are 1 and 1. The n+1-st Fibonacci number can be computed by adding the 
+n-th and the n-1-th Fibonacci number. The first few are therefore 1, 1, 1+1=2, 1+2=3, 2+3=5, 3+5=8.
+
+16. Write a function that return the Factorial of given number n.
+
+17. Print the following pattern without using print in-built function.
+i.      ii.     iii.
+***     123     321
+***     123     321
+***     123     321
+
+18. Convert i. Minutes -> Seconds 
+            ii. Fahrenheit -> Celsius -> Kelvin
+
+19. Design a quiz game which take answer as input to given question (atleast 5) and print final result(Total marks & percentage). +2 for Correct answer, -0.5 for Incorrect.
+
+20. Design a tool which find area & perimeter of different shapes.
+
+21. Return first, middle & last element of array.
+
+22. 
