@@ -88,7 +88,7 @@
     {    
         "id" : "16",
         "topic" : "Conditional Statement & Loops",
-        "question" : "Print the following pattern without using print in-built function.",
+        "question" : "Print the following pattern without using print function.",
         "i.      ii.     iii.",
         "***     123     321",
         "***     123     321",
