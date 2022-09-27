@@ -8,8 +8,9 @@
     Step 6 : Pull the latest changes from upstream into your local repository
     Step 7 : Create a new branch
     Step 8 : Make changes in your local repository
-    Step 9 : Commit your changes
-    Step 10 : Push your changes to your fork
+    Step 9 : Edit code in answer section of .json file
+    Step 10 : Commit your changes
+    Step 11 : Push your changes to your fork
 
 
 #                 Begin the pull request!!!
