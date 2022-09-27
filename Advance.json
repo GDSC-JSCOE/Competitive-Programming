@@ -34,5 +34,6 @@
         "topic" : "DSA",
         "question" : "Sort array of 0s,1s and 2s in a single scan (Visiting each element once).",
         "solution": "Write your code here"
-    }
+    },
+    {"Maintainer" : "Gaurav-2803"}
 ]
