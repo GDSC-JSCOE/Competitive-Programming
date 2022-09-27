@@ -2,88 +2,99 @@
     {
         "id" : "0",
         "topic" : "Input/Output",
-        "question" : "Write a program that asks the user for their name and greets them with their name."
+        "question" : "Write a program that asks the user for their name and greets them with their name.",
+        "solution": "Write your code here"
     },
     {
         "id" : "1",
         "topic" : "Conditional Statement",
-        "question" : "Modify the previous program (i.e. Q.1) such that only the users Alice and Bob are greeted with their names."
+        "question" : "Modify the previous program (i.e. Q.1) such that only the users Alice and Bob are greeted with their names.",
+        "solution": "Write your code here"
     },
     {
         "id" : "2",
         "topic" : "Maths",
-        "question" : "Write a program that asks the user for a number n and prints the sum of the numbers 1 to n"
+        "question" : "Write a program that asks the user for a number n and prints the sum of the numbers 1 to n",
+        "solution": "Write your code here"
     },
     {
         "id" : "3",
         "topic" : "Conditional Statement",
-        "question" : "Modify the previous program (i.e. Q.3) such that only multiples of three or five are considered in the sum, e.g. 3, 5, 6, 9, 10, 12, 15 for n=17."
-        
+        "question" : "Modify the previous program (i.e. Q.3) such that only multiples of three or five are considered in the sum, e.g. 3, 5, 6, 9, 10, 12, 15 for n=17.",
+        "solution": "Write your code here"
     },
     {
-    
         "id" : "4",
         "topic" : "Conditional Statement / Loops",
-        "question" : " Write a program that asks the user for a number n and gives them the possibility to choose between computing the sum and computing the product of 1,…,n."
+        "question" : " Write a program that asks the user for a number n and gives them the possibility to choose between computing the sum and computing the product of 1,…,n.",
+        "solution": "Write your code here"
     },
     {    
         "id" : "5",
         "topic" : "Loops",
-        "question" : "Write a program that prints a multiplication table for numbers up to 12."
+        "question" : "Write a program that prints a multiplication table for numbers up to 12.",
+        "solution": "Write your code here"
     },
     {
         "id" : "6",
         "topic" : "Conditional Statement & Loops",
-        "question" : "Write a program that prints all prime numbers between 2 numbers."
+        "question" : "Write a program that prints all prime numbers between 2 numbers.",
+        "solution": "Write your code here"
         
     },
     {
-    
         "id" : "7",
         "topic" : "Loops",
-        "question" : "Write a program that prints the next 20 leap years."
+        "question" : "Write a program that prints the next 20 leap years.",
+        "solution": "Write your code here"
     },
     {    
         "id" : "8",
         "topic" : "Conditional Statement & Loops",
-        "question" : "Write a function that returns the largest element in a array."
+        "question" : "Write a function that returns the largest element in a array.",
+        "solution": "Write your code here"
     },
     {
         "id" : "9",
         "topic" : "Functions / Conditional Statements",
-        "question" : "Write a function that checks whether an element occurs in a array."
-        
+        "question" : "Write a function that checks whether an element occurs in a array.",
+        "solution": "Write your code here"
     },
     {
-    
         "id" : "10",
         "topic" : "Functions / Conditional Statements",
-        "question" : "Write a function that returns the elements on odd positions in a list."
+        "question" : "Write a function that returns the elements on odd positions in a list.",
+        "solution": "Write your code here"
     },
     {    
         "id" : "11",
         "topic" : "Conditional Statement & Loops",
-        "question" : "Write three functions that compute the sum of the numbers in a array: using a for-loop, a while-loop and recursion."
+        "question" : "Write three functions that compute the sum of the numbers in a array: using a for-loop, a while-loop and recursion.",
+        "solution": "Write your code here"
     },
     {    
         "id" : "12",
         "topic" : "Arrays & Loops",
-        "question" : "Write a function that concatenates two arrays. [a,b,c], [1,2,3] → [a,b,c,1,2,3]"
+        "question" : "Write a function that concatenates two arrays. [a,b,c], [1,2,3] → [a,b,c,1,2,3]",
+        "solution": "Write your code here"
     },
     {    
         "id" : "13",
         "topic" : "Arrays & Loops",
-        "question" : "Write a function that merges two sorted into a new sorted array. [1,4,6],[2,3,5] → [1,2,3,4,5,6]. You can do this quicker than concatenating them followed by a sort."
+        "question" : "Write a function that merges two sorted into a new sorted array. [1,4,6],[2,3,5] → [1,2,3,4,5,6]. You can do this quicker than concatenating them followed by a sort.",
+        "solution": "Write your code here"
     },
     {    
         "id" : "14",
         "topic" : "Conditional Statement & Loops",
-        "question" : "Write a function that computes the list of the first n Fibonacci numbers. The first two Fibonacci numbers are 1 and 1. The first few are therefore 1, 1, 1+1=2, 1+2=3, 2+3=5, 3+5=8."
+        "question" : "Write a function that computes the list of the first n Fibonacci numbers. The first two Fibonacci numbers are 1 and 1. The first few are therefore 1, 1, 1+1=2, 1+2=3, 2+3=5, 3+5=8.",
+        "solution": "Write your code here"
     },
     {    
         "id" : "15",
         "topic" : "Conditional Statement & Loops",
-        "question" : "Write a function that return the Factorial of given number n."
+        "question" : "Write a function that return the Factorial of given number n.",
+        "solution": "Write your code here"
     },
     {    
         "id" : "16",
@@ -93,25 +104,30 @@
         "***     123     321",
         "***     123     321",
         "***     123     321",
+        "solution": "Write your code here"
     },
     {    
         "id" : "17",
         "topic" : "Conditional Statement & Loops",
-        "question" : "Convert i. Minutes -> Seconds ii. Fahrenheit -> Celsius -> Kelvin"
+        "question" : "Convert i. Minutes -> Seconds ii. Fahrenheit -> Celsius -> Kelvin",
+        "solution": "Write your code here"
     },
     {    
         "id" : "18",
         "topic" : "Conditional Statement & Maths",
-        "question" : "Design a quiz game which take answer as input to given question (atleast 5) and print final result(Total marks & percentage). +2 for Correct answer, -0.5 for Incorrect."
+        "question" : "Design a quiz game which take answer as input to given question (atleast 5) and print final result(Total marks & percentage). +2 for Correct answer, -0.5 for Incorrect.",
+        "solution": "Write your code here"
     },
     {    
         "id" : "19",
         "topic" : "Conditional Statement & Maths",
-        "question" : "Design a tool which find area & perimeter of different shapes."
+        "question" : "Design a tool which find area & perimeter of different shapes.",
+        "solution": "Write your code here"
     },
     {    
         "id" : "20",
         "topic" : "Arrays & Conditional Statements",
-        "question" : "Return first, middle & last element of array."
+        "question" : "Return first, middle & last element of array.",
+        "solution": "Write your code here"
     },
 ]
