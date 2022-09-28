@@ -106,5 +106,17 @@
         "question" : "Write a function that takes number K where is smaller than size of array, we need to find the Kth smallest and largest elementin the given array.It is given that all array elements are not distinct and If not present return -1.",
         "solution": "Write your code here"
     },
+    {
+        "id" : "15",
+        "topic" : "DSA",
+        "question" : "Write a function that sort array of 0s, 1s & 2s (inbuilt sort functions are not allowed)",
+        "solution": "Write your code here"
+    },
+    {
+        "id" : "16",
+        "topic" : "DSA",
+        "question" : "Given Unsorted array check whether elements are in Arithmetic Progression (Differnce between every 2 consecutive is same)",
+        "solution": "Write your code here"
+    }
     {"Maintainer" : "Gaurav-2803"}
 ]
