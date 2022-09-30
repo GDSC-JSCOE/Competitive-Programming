@@ -723,3 +723,39 @@ for i in range(len(sum_left)):
         print(f"Matching index is {i}.")
         break
 	}
+
+27 the minimum numbers of operations required by Chef to make parity of all the elements same.
+=============================================================================================
+#include <iostream>
+using namespace std;
+#define ll long long 
+int main() {
+	// your code goes here
+	int t;
+	cin>>t;
+	while(t--)
+	{
+	    int n;
+	    cin>>n;
+	    ll arr[n];
+	    ll even=0,odd=0;
+	    for(int i=0;i<n;i++)
+	    {
+	        cin>>arr[i];
+	        if(arr[i]%2==1)
+	        {
+	            odd++;
+	        }
+	       
+	    }
+	    if(odd==n || odd== 0)
+	    {
+	        cout<<"0"<<endl;
+	    }
+	    else
+	    {
+	        cout<<n-odd<<endl;
+	    }
+	}
+	return 0;
+}
