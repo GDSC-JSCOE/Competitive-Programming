@@ -130,6 +130,64 @@ Solution :
 
 5. Write a program that outputs all possibilities to put + or - or nothing between the numbers 1,2,…,9 (in this order) such that the result is 100. For example 1 + 2 + 3 - 4 + 5 + 6 + 78 + 9 = 100
 Solution :
+import re
+
+array = [[0, 0, 0, 0, 0, 0, 0, 0]]
+elems = [0, 0, 0, 0, 0, 0, 0, 0]
+
+for n in range(6560):
+    copy = elems.copy()
+    copy[-1] += 1
+    while 3 in copy:
+        i = copy.index(3)
+        copy[i:] = [0] * (len(copy) - i)
+        copy[i - 1] += 1
+    array.append(copy)
+    elems = copy
+
+lines = []
+
+Fillers = ('+', '-', '')
+
+j = 0
+
+while len(lines) < 6561:
+    expression = ''
+    i, k = 0, 0
+    for n in range(17):
+        if n % 2 == 0:
+            i += 1
+            expression += str(i)
+        else:
+            expression += Fillers[array[j][k]]
+            k += 1
+    lines.append(expression)
+    j += 1
+
+lines.remove('123456789')
+
+result = []
+
+for line in lines:
+    array = re.split('(\-|\+)', line)
+    ops = 'add'
+    num = 0
+    for a in array:
+        if a.isdigit():
+            if ops == 'add':
+                num += int(a)
+            else:
+                num  -= int(a)
+        elif a in Fillers:
+            if a == '+':
+                ops = 'add'
+            else:
+                ops = 'sub'
+    if num == 100: result.append(line)
+    
+result.sort()
+
+print(*result, sep='\n')
 
 6. Sort array of 0s,1s and 2s in a single scan (Visiting each element once).
 Solution : 
