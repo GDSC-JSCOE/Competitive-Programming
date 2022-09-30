@@ -126,6 +126,30 @@ int main()
 
 7. Write a program that prints all prime numbers between 2 numbers. 
 Solution : 
+//cpp
+class Solution {
+  public:
+  
+  bool isprime(int n){
+        if(n<=1)
+            return false;
+        for(int i=2;i<=sqrt(n);i++){
+            if(n%i==0)
+            return false;
+        }
+        return true;
+  }
+    void primeRange(int M, int N) {
+        vector<int>ans;
+        for(M;M<=N;M++){
+            if(isprime(M))
+                ans.push_back(M);
+        }
+        for(int i=0;i<ans.size();i++){
+	cout<<ans[i]<<" ";
+	}
+    }
+};
 
 8. Write a program that prints the next 20 leap years.
 Solution : 
