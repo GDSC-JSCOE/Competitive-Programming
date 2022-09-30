@@ -737,6 +737,66 @@ public class BasicCalculator {
                            + " = " + o);
     }
 }
+26.Printing Butterfly pattern
+Example For N=6:
+*          *
+**        **
+***      ***
+****    ****
+*****  *****
+************
+************
+*****  *****
+****    ****
+***      ***
+**        **
+*          *
+Solution:
+======================================
+#Cpp
+#include<iostream>
+#include<stdlib.h>
+#include <bits/stdc++.h>
+#define ll long long int
+#define fastio  cin.tie(0), cout.tie(0),ios_base::sync_with_stdio(false);
+
+using namespace std;
+
+int main() {
+    fastio;
+int b=1,i,j;
+int N;
+cin>>N;
+
+
+for(i=1;i<=N;i++)
+{
+
+        for(j=1;j<=i;j++)
+        cout<<"*";
+       int  space=2*(N-i);
+        for(j=1;j<=space;j++)
+        cout<<" ";
+        for(j=1;j<=i;j++)
+        cout<<"*";
+
+        cout<<endl;
+}
+for(i=N;i>=1;i--)
+{
+    for(j=1;j<=i;j++)
+    cout<<"*";
+    int space=2*(N-i);
+    for(j=1;j<=space;j++)
+    cout<<" ";
+    for(j=1;j<=i;j++)
+    cout<<"*";
+
+    cout<<endl;
+}
+
+    return 0;
+}
 
 
 
