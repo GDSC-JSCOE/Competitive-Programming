@@ -137,6 +137,33 @@ def isPalindrome(n):  #user-defined function
 5. Write a function on_all that applies a function to every element of a list. Use it to print the first twenty perfect squares. The perfect squares can be found by multiplying each natural number with itself. The first few perfect squares are 1*1= 1, 2*2=4, 3*3=9, 4*4=16. Twelve for example is not a perfect square because there is no natural number m so that m*m=12.
 Solution : 
 
+#include <bits/stdc++.h>
+using namespace std;
+
+
+void perfectSquares(float l, float r)
+{
+
+	// For every element from the range
+	for (int i = l; i <= r; i++) {
+
+		// If current element is
+		// a perfect square
+		if (sqrt(i) == (int)sqrt(i))
+			cout << i << " ";
+	}
+}
+
+int main()
+{
+	int l = 0, r = 20;
+
+	perfectSquares(l, r);
+
+	return 0;
+}
+
+
 6. Write a function that combines two arrays by alternatingly taking elements, e.g. [a,b,c], [1,2,3] → [a,1,b,2,c,3].
 Solution : 
 #CPP
