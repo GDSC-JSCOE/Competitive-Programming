@@ -316,6 +316,21 @@ else:
 *********
 
 Solution : 
+p=input("words?")
+
+def frame(words):
+
+    size = len(max(words, key=len))
+
+    print('*' * (size + 4))
+
+    for word in words:
+
+        print(f'* {word} *')
+
+    print('*' * (size + 4))
+
+frame(p.split(" "))
 
 12. Print the following pattern without using print in-built function.
 i.      ii.     iii.    iv.
