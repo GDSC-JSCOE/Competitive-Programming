@@ -25,11 +25,11 @@ Solution :
     string name;
          cout<<" Enter  Name : ";
          cin>>name;
-         if(name=="Alice" || name=="ob")
+         if(name=="Alice" || name=="Bob")
          {
-          cout<<"Hi "+name;
+          cout<<"Hi "+name>>Alice;
          }else{
-          cout<<"Hi";
+          cout<<"Hi"+name>>Bob;
          }
         return 0;
 }
