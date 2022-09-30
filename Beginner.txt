@@ -723,3 +723,16 @@ for i in range(len(sum_left)):
         print(f"Matching index is {i}.")
         break
 	}
+#include<stdio.h>
+#include<conio.h>
+int fibonacci(int);
+int main(){ 
+	int n, i; 
+	printf("Enter the number of element you want in series :\n"); 
+	scanf("%d",&n); 
+	printf("fibonacci series is : \n");
+	for(i=0;i<n;i++) { 
+		printf("%d ",fibonacci(i));
+	}
+	getch();
+}
