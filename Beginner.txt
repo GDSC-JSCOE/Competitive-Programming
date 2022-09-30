@@ -1,8 +1,8 @@
  Example : 
  Solution :
-              # Python  
-              age=input(int("Age : "))
-              print(age);
+# Python  
+age=input(int("Age : "))
+print(age);
                                                                                                                                                Maintainer : Gaurav-2803
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 1. Write a program that asks the user for their name and greets (Hi!, Hey!, Hello!, etc) them with their name. 
