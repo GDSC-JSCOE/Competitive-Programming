@@ -155,6 +155,22 @@ Solution :
 
 9. Write functions that add, subtract, and multiply digits of two numbers.
 Solution : 
+#python
+
+def add(a,b):
+    return a+b;
+def sub(a,b):
+    return a-b;
+def multiply(a,b):
+    return a*b;
+
+f1=add(5,5.2)
+f2=sub(5,4.2)
+f3=multiply(5,5.2)
+print("Addition: ", f1)
+print("substraction: ", f2)
+print("multiplication: ", f3)
+
 
 10. Implement binary search.
 Solution : 
