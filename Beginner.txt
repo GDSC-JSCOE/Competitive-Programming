@@ -668,3 +668,37 @@ int main()
   cout<<gcd(a,b)<<endl;
   //Time Complexity:O(log(min(a,b)))
 }
+
+
+25.Conversion of Binary number to its decimal
+
+======================================
+#C
+Solution:
+#include<stdio.h>
+
+int main()
+{
+  int T,N,K,i,j,A,B;
+  char s[100][100];
+
+  scanf("%d",&T);
+
+  for(i=0;i<T;i++)
+  {
+    scanf("%d %d %d",&N,&A,&B);
+
+    scanf("%s",s[j]);
+K=0;
+    for(j=0;j<N;j++)
+    {
+     if(s[i][j]=='0')
+     K=K+A;
+     if(s[i][j]=='1')
+     K=K+B;
+    }
+
+    printf("%d\n",K);
+  }
+  return 0;
+}
