@@ -11,10 +11,10 @@ Solution :
  #include <iostream>
  using namespace std;
  int main(){
-    string name;
+    string name1;
          cout<<" Enter Name  : ";
-         cin>>name;
-         cout<<"Hi "+name;
+         cin>>name1;
+         cout<<"Hi! "+name1;
  return 0;
 }
 2. Modify the previous program (i.e. Q.1) such that only the users Alice and Bob are greeted with their names.
