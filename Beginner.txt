@@ -122,6 +122,32 @@ if y=='s':
 if y=='m':
     print('Product :',multi)
 
+======= In C++ ==========
+#include <iostream>
+using namespace std;
+int main() {
+    int n, a, b;
+    a = 0;
+    b = 1;
+    cin >> n;
+    n++;
+    while (n--) {
+        a = a + n;
+        b = b * n;
+    }
+    cout << "Sum or Product (s/p) : ";
+    char c;
+    cin >> c;
+    if (c == 's')
+        cout << "Sum : " << a << endl;
+    else if (c == 'p')
+        cout << "Product : " << b << endl;
+    else
+        cout << "Invalid Input";
+    return 0;
+}
+==========================
+
 6. Write a program that prints a multiplication table for numbers up to 12.
 Solution : 
 #include <iostream>
