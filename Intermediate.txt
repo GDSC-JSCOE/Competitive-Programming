@@ -174,6 +174,29 @@ print("multiplication: ", f3)
 
 10. Implement binary search.
 Solution : 
+//java
+class Solution {
+    int binarysearch(int arr[], int n, int k){
+        int start=0;
+        int end=n-1;
+        while(start<=end){
+            int mid =start +(end-start)/2;
+            if(arr[mid]<k){
+                start=mid+1;
+            }
+            if(arr[mid]>k){
+                end=mid-1;
+            }
+            if(arr[mid]==k) {
+              return mid;
+            }
+        }
+        return -1;
+    }
+}
+
+
+=======
 #Java
  class binarySearch {
   public int search(int[] nums, int target) {
@@ -197,7 +220,6 @@ Solution :
         binarySearch(arr,30);     
  }   
 }
-
 def binary_search(list1, n):  
     low = 0  
     high = len(list1) - 1  
@@ -340,6 +362,7 @@ printArray(arr)
 17. Given Unsorted array check whether elements are in Arithmetic Progression (Differnce between every 2 consecutive is same) if not return -1.
 Example : 1,2,3,4,5 are in A.P
 Solution : 
+
 
 18. Given a sorted array of distinct integers and a target value, return the index if the target is found. If not, return the index where it would be if it were inserted in order. You must write an algorithm with O(log n) runtime complexity.
 Solution : 
