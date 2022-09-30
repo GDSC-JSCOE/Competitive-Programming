@@ -761,9 +761,9 @@ int main() {
 	
 	
 	
-	problem - Equilibrium index of an array
+28. Equilibrium index of an array
 	
-	int findEquilibrium(int A[], int n)
+int findEquilibrium(int A[], int n)
 {
   //Your code here
   double s=0;
