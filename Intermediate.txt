@@ -628,7 +628,6 @@ arr=[1,2,3,4,5]
 arr1=[2,3,1,0,5]
 remain(arr,arr1)
 
-
 24. In an array 1-100 multiple numbers are duplicates, find them?
 Solution :
 //function:-
