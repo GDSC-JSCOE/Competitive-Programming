@@ -31,6 +31,33 @@ Solution :
 
 9. Write functions that add, subtract, and multiply digits of two numbers.
 Solution : 
+#C++
+[
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int first, second, add, subtract, multiply;
+    float divide;
+    
+    cout << "Please enter two integer: ";
+    cin >> first;
+    cin >> second;
+    
+    add        = first + second;
+    subtract = first - second;
+    multiply = first * second;
+    divide     = first / (float)second;   //typecasting
+    
+    cout << endl <<"Sum = " << add;
+    cout << endl <<"Difference = " << subtract;
+    cout << endl <<"Multiplication = " << multiply;
+    cout << endl <<"Division = " << divide; 
+    
+    return 0;
+}
+]
 
 10. Implement binary search.
 Solution : 
