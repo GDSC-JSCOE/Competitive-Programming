@@ -407,6 +407,17 @@ int main()
 
 15. Write a function that takes number K where is smaller than size of array, we need to find the Kth smallest and largest elementin the given array.It is given that all array elements are not distinct and If not present return -1. 
 Solution : 
+//cpp
+int findnum(int arr[],int n){
+int k;
+cin>>k;
+if(k>=n)
+return -1;
+sort(arr,arr+n);
+cout<<arr[k-1];
+cout<<arr[n-k];
+return 0;
+}
 
 16. Write a function that sort array of 0s, 1s & 2s (inbuilt sort functions are not allowed)
 Solution : # Python program to sort an array with
