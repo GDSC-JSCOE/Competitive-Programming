@@ -486,10 +486,9 @@ class Solution
         }
     }
 }
-#question 
-Remove duplicates in small prime array
 
-solution
+21. Remove duplicates in small prime array
+Solution : 
 class Solution
 {
     ArrayList<Integer> removeDuplicate(int arr[], int n)
