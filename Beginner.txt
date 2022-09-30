@@ -89,6 +89,23 @@ int main()
 5. Write a program that asks the user for a number n and gives them the possibility to choose between computing the sum and computing the product of 1,…,n.
 Solution : 
 
+
+x=int(input('Enter a number :'))
+y=input('Compute the sum or Compute the product(s/m) ? :')
+sum=0
+multi=1
+for i in range(1,x+1):
+    if y=='s':
+        sum=sum+i
+    if y=='m':
+        multi=multi*i
+if y=='s':
+    print('Sum :',sum)    
+if y=='m':
+    print('Product :',multi)
+
+
+
 6. Write a program that prints a multiplication table for numbers up to 12.
 Solution : 
 #include <iostream>
