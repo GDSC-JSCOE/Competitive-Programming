@@ -167,6 +167,37 @@ Code End
 Solution : 
 
 10. Write a function that checks whether an element occurs in a array.
+Solution : 
+#include <iostream>
+using namespace std;
+
+int main() {
+
+  int i, n;
+  float arr[100];
+
+  cout << "Enter total number of elements(1 to 100): ";
+  cin >> n;
+  cout << endl;
+
+  // Store number entered by the user
+  for(i = 0; i < n; ++i) {
+    cout << "Enter Number " << i + 1 << " : ";
+    cin >> arr[i];
+  }
+
+  // Loop to store largest number to arr[0]
+  for(i = 1;i < n; ++i) {
+
+    // Change < to > if you want to find the smallest element
+    if(arr[0] < arr[i])
+      arr[0] = arr[i];
+  }
+
+  cout << endl << "Largest element = " << arr[0];
+
+  return 0;
+}
 Solution : function Checking(x)
 a=([1,3,5,8,9]);
 if x==a
@@ -263,7 +294,12 @@ class Main {
 
 16. Write a function that return the Factorial of given number n.
 Solution : 
-
+# Python 
+def factorial(n):
+    if n==0:
+        return 1
+    else:
+        return n*factorial(n-1)
 17. Print the following pattern without using print in-built function.
 i.      ii.     iii.
 ***     123     321
