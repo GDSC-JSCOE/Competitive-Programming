@@ -425,6 +425,17 @@ printArray(arr)
 17. Given Unsorted array check whether elements are in Arithmetic Progression (Differnce between every 2 consecutive is same) if not return -1.
 Example : 1,2,3,4,5 are in A.P
 Solution : 
+//cpp
+int ap(int arr[],int n){
+sort(arr,arr+n);
+int d=arr[1]-arr[0];
+for(int i=1;i<n;i++){
+if(arr[i]-arr[i-1])!=d){
+return -1;
+}
+}
+return 1;
+}
 
 
 18. Given a sorted array of distinct integers and a target value, return the index if the target is found. If not, return the index where it would be if it were inserted in order. You must write an algorithm with O(log n) runtime complexity.
