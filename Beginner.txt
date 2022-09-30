@@ -33,6 +33,11 @@ Solution :
          }
         return 0;
 }
+#Solved Q no 1 using python
+#python
+name=input("Enter your name: ")
+print("Hello!,",name)
+
 3. Write a program that asks the user for a number n and prints the sum of the numbers 1 to n
 Solution : 
  #include <iostream>
@@ -62,6 +67,19 @@ int main()
     cout << (n*(n+1))/2;
     return 0;
 }
+#solved Q no 3 using python
+#python
+num = int(input("Enter numer n: "))
+
+if num < 0:
+   print("Enter a positive number")
+else:
+   sum = 0
+   
+   while(num > 0):
+       sum += num
+       num -= 1
+   print("The sum is", sum)
 
   
 
