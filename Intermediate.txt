@@ -31,6 +31,25 @@ static void reverseArray(int[] intArray,int size){
 }
 3. Write a function that tests whether a string is a palindrome.
 Solution : 
+
+class Solution {
+    int isPalindrome(String S) {
+      char [] ans=new char[S.length()];
+      for(int i=0;i<S.length();i++){
+          ans[i]=S.charAt(i);
+      }
+      int start=0;
+      int end=S.length()-1;
+      while(start<end){
+          if(ans[start] != ans[end]){
+              return 0;
+          }
+          start++;
+          end--;
+      }
+      return 1;
+    }
+};
 class Main{
 public static void main(String[] args){
 String str="abba";
@@ -39,7 +58,7 @@ StringBuilder ans=new StringBuilder();
 ans.append(str);
 ans.reverse;
 str1=ans.toString();
-if(str==str){
+if(str1==str){
 System.out.print("Palindromic");
 }
 Systme.out.print("Not palindromic");
@@ -71,16 +90,70 @@ public:
 
 4. Write a function that tests whether a number is a palindrome.
 Solution : 
+#Python
+# Python program to check if number is Palindrome
+
+def isPalindrome(n):  #user-defined function
+    # calculate reverse of number
+    temp=n
+    reverse = 0
+    reminder = 0
+    while(n != 0):
+        remainder = n % 10
+        reverse = reverse * 10 + remainder
+        n = int(n / 10)
+    if(temp== reverse):
+        return 1
+    else:
+        return 0
+
 
 5. Write a function on_all that applies a function to every element of a list. Use it to print the first twenty perfect squares. The perfect squares can be found by multiplying each natural number with itself. The first few perfect squares are 1*1= 1, 2*2=4, 3*3=9, 4*4=16. Twelve for example is not a perfect square because there is no natural number m so that m*m=12.
 Solution : 
 
 6. Write a function that combines two arrays by alternatingly taking elements, e.g. [a,b,c], [1,2,3] → [a,1,b,2,c,3].
 Solution : 
-
+#CPP
+vector<int> mergeArr(int arr1[],int arr2[],m,n){
+	vector<int> ans(m+n);
+	int a1=0;
+	int a2=0;
+	for(int i=0;i<(m+n);i++){
+		if(i%2==0){
+			ans.push_back(arr1[a1];
+			a1++;
+		}else{
+			ans.push_back(arr2[a2]);
+			a2++;
+		}
+	}
+	return ans;
+} 
 
 7. Write a function that rotates a array by k elements. For example [1,2,3,4,5,6] rotated by two becomes [3,4,5,6,1,2]. Try solving this without creating a copy of the array. How many swap or move operations do you need?
 Solution : 
+//java
+class Solution
+{
+    //Function to rotate an array by d elements in counter-clockwise direction. 
+    static void rotateArr(int arr[], int d, int n)
+    {
+        int []ans=new int[n];
+       int i=0;
+       while(i<n-d){
+           ans[i]=arr[i+d];
+           i++;
+       }
+       int j=0;
+       while(j<d){
+           ans[i+j]=arr[j];
+           j++;
+       }
+       for(int k=0;k<n;k++){
+           arr[k]=ans[k];
+       }
+    }
+}
 
  
 class Main
@@ -157,6 +230,29 @@ print("multiplication: ", f3)
 
 10. Implement binary search.
 Solution : 
+//java
+class Solution {
+    int binarysearch(int arr[], int n, int k){
+        int start=0;
+        int end=n-1;
+        while(start<=end){
+            int mid =start +(end-start)/2;
+            if(arr[mid]<k){
+                start=mid+1;
+            }
+            if(arr[mid]>k){
+                end=mid-1;
+            }
+            if(arr[mid]==k) {
+              return mid;
+            }
+        }
+        return -1;
+    }
+}
+
+
+=======
 #Java
  class binarySearch {
   public int search(int[] nums, int target) {
@@ -180,7 +276,6 @@ Solution :
         binarySearch(arr,30);     
  }   
 }
-
 def binary_search(list1, n):  
     low = 0  
     high = len(list1) - 1  
@@ -330,10 +425,144 @@ printArray(arr)
 17. Given Unsorted array check whether elements are in Arithmetic Progression (Differnce between every 2 consecutive is same) if not return -1.
 Example : 1,2,3,4,5 are in A.P
 Solution : 
+//cpp
+int ap(int arr[],int n){
+sort(arr,arr+n);
+int d=arr[1]-arr[0];
+for(int i=1;i<n;i++){
+if(arr[i]-arr[i-1])!=d){
+return -1;
+}
+}
+return 1;
+}
+
 
 18. Given a sorted array of distinct integers and a target value, return the index if the target is found. If not, return the index where it would be if it were inserted in order. You must write an algorithm with O(log n) runtime complexity.
 Solution : 
+//java
+ int binarysearch(int arr[], int n, int k) {
+        int start=0;
+        int end=n-1;
+        int ans=0;
+        while(start<=end){
+            int mid =start +(end-start)/2;
+            if(arr[mid]<k){
+                start=mid+1;
+            }
+            if(arr[mid]>k){
+                end=mid-1;
+            }
+            if(arr[mid]==k) {
+              return mid;
+            }
+            ans=mid;
+        }
+        return ans+1;
+    }
+    
+    
+#CPP
+class Solution{
+public:
+    int binarysearch(int arr[], int n, int k){
+        int first=0;
+        int last=n-1;
+        if(arr[0]>k){
+            return 0;
+        }
+        int mid=(first+last)/2;
+        while(first<last){
+            if(arr[mid]==k){
+                return mid;
+            }
+            if(arr[first]==k){
+                return first;
+            }
+            if(arr[last]==k){
+                return last;
+            }
+            if(k<arr[mid]){
+                last=mid-1;
+                mid=(first+last)/2;
+            }else{
+                first=mid+1;
+                mid=(first+last)/2;
+            }
+        }
+        return mid+1;
+    }
+};
 
 19. Given a string S,of length N that is indexed from 0 to N-1, print its even-indexed and odd-indexed characters as 2 space-separated strings on a single line.
     I/P -> Gaurav   O/P -> Gua arv
 Solution : 
+
+
+
+
+20 .Sort an array of 0s, 1s and 2s (Given an array of size N containing only 0s, 1s, and 2s; sort the array in ascending order.)
+/// java 
+class Solution
+{
+    public static void sort012(int arr[], int n)
+    {
+        // code here 
+        int zero =0;
+        int one =0;
+        int two =0;
+        for(int i =0; i<n;i++){
+            if (arr[i]==0){
+                zero++;
+            }
+            else if(arr[i]==1){
+                one++;
+            }
+            else{
+                two++ ;
+                
+            }
+        }
+        for(int i=0;i<n;i++){
+            if (zero>0){
+                arr[i]=0;
+                zero--;
+            }
+            else if(one>0){
+                arr[i]=1;
+                one--;
+            }
+            else{
+                arr[i]=2;
+            }
+        }
+    }
+}
+
+21. Remove duplicates in small prime array
+Solution : 
+class Solution
+{
+    ArrayList<Integer> removeDuplicate(int arr[], int n)
+    {
+        // code here 
+        ArrayList<Integer>a=new ArrayList<>();
+        for(int i=0;i<arr.length;i++){
+            if(!a.contains(arr[i])){
+                a.add(arr[i]);
+            }
+        }
+        return a;
+        
+        
+    }
+}
+
+22. Print all permutation of String both iterative and Recursive way?
+Solution : 
+
+23. Given two arrays, 1,2,3,4,5 and 2,3,1,0,5 find which number is not present in the second array.
+Solution :
+
+24. In an array 1-100 multiple numbers are duplicates, find them?
+Solution :

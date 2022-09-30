@@ -109,6 +109,23 @@ int main()
 5. Write a program that asks the user for a number n and gives them the possibility to choose between computing the sum and computing the product of 1,…,n.
 Solution : 
 
+
+x=int(input('Enter a number :'))
+y=input('Compute the sum or Compute the product(s/m) ? :')
+sum=0
+multi=1
+for i in range(1,x+1):
+    if y=='s':
+        sum=sum+i
+    if y=='m':
+        multi=multi*i
+if y=='s':
+    print('Sum :',sum)    
+if y=='m':
+    print('Product :',multi)
+
+
+
 6. Write a program that prints a multiplication table for numbers up to 12.
 Solution : 
 #include <iostream>
@@ -129,6 +146,44 @@ int main()
 
 7. Write a program that prints all prime numbers between 2 numbers. 
 Solution : 
+//cpp
+class Solution {
+  public:
+  
+  bool isprime(int n){
+        if(n<=1)
+            return false;
+        for(int i=2;i<=sqrt(n);i++){
+            if(n%i==0)
+            return false;
+        }
+        return true;
+  }
+    void primeRange(int M, int N) {
+        vector<int>ans;
+        for(M;M<=N;M++){
+            if(isprime(M))
+                ans.push_back(M);
+        }
+        for(int i=0;i<ans.size();i++){
+	cout<<ans[i]<<" ";
+	}
+    }
+};
+
+print('Enter two numbers :')
+x=int(input())
+y=int(input())
+print('Prime numbers : ',end=' ')
+for i in range(x,y+1):
+    cnt=0
+    for j in range(1,i+1):
+        if i%j==0:
+            cnt+=1
+    if cnt==2:
+        print(i,end=' ')
+
+
 
 8. Write a program that prints the next 20 leap years.
 Solution : 
@@ -298,6 +353,16 @@ public class Concat {
 14. Write a function that merges two sorted into a new sorted list. [1,4,6],[2,3,5] → [1,2,3,4,5,6]. You can do this quicker than concatenating them followed by a sort.
 Solution : 
 
+
+def merge(list1,list2):
+    print(sorted(list1 + list2))
+    
+list1 = [1,2,3,4,5]
+list2= [10,20,30,40,50,60]
+merge(list1,list2)
+
+
+
 15. Write a function that computes the list of the first n Fibonacci numbers. The first two Fibonacci numbers are 1 and 1. The first few are therefore 1, 1, 1+1=2, 1+2=3, 2+3=5, 3+5=8.
 Solution : 
 class Main {
@@ -358,6 +423,94 @@ int main()
 
 19. Design a quiz game which take answer as input to given question (atleast 5) and print final result(Total marks & percentage). +2 for Correct answer, -0.5 for Incorrect.
 Solution : 
+
+
+def new_game():
+
+    guesses = []
+    correct_guesses = 0
+    question_num = 1
+
+    for key in questions:
+        print("-------------------------")
+        print(key)
+        for i in options[question_num-1]:
+            print(i)
+        guess = input("Enter (A, B, C, or D): ")
+        guess = guess.upper()
+        guesses.append(guess)
+
+        correct_guesses += check_answer(questions.get(key), guess)
+        question_num += 1
+
+    display_score(correct_guesses, guesses)
+
+# -------------------------
+def check_answer(answer, guess):
+
+    if answer == guess:
+        print("CORRECT!")
+        return 1
+    else:
+        print("WRONG!")
+        return 0
+
+# -------------------------
+def display_score(correct_guesses, guesses):
+    print("-------------------------")
+    print("RESULTS")
+    print("-------------------------")
+
+    print("Answers: ", end="")
+    for i in questions:
+        print(questions.get(i), end=" ")
+    print()
+
+    print("Guesses: ", end="")
+    for i in guesses:
+        print(i, end=" ")
+    print()
+
+    score = int((correct_guesses/len(questions))*100)
+    print("Your score is: "+str(score)+"%")
+
+# -------------------------
+def play_again():
+
+    response = input("Do you want to play again? (yes or no): ")
+    response = response.upper()
+
+    if response == "YES":
+        return True
+    else:
+        return False
+# -------------------------
+
+
+questions = {
+ "Who created Python?: ": "A",
+ "What year was Python created?: ": "B",
+ "Python is tributed to which comedy group?: ": "C",
+ "Is the Earth round?: ": "A",
+    "Value of pi?: ": "C",
+}
+
+options = [["A. Guido van Rossum", "B. Elon Musk", "C. Bill Gates", "D. Mark Zuckerburg"],
+          ["A. 1989", "B. 1991", "C. 2000", "D. 2016"],
+          ["A. Lonely Island", "B. Smosh", "C. Monty Python", "D. SNL"],
+          ["A. True","B. False", "C. sometimes", "D. What's Earth?"],
+          ['1.24','2.34','3.14','3.68']]
+
+new_game()
+
+while play_again():
+    new_game()
+
+print("Byeeeeee!")
+
+
+
+
 
 20. Design a tool which find area & perimeter of different shapes.
 Solution : 	# define a function for calculating
@@ -426,7 +579,89 @@ Solution : 	# define a function for calculating
   		calculate_area(shape_name)
 
 21. Return first, middle & last element of array.
-Solution : 
+Solution :
+#python
+def func():
+    arr = [1,2,3,4,5]
+    ans = []
+    middle = 5//2
+    ans.append(arr[0])
+    ans.append(arr[middle])
+    ans.append(arr[-1])
+    return ans
+answer = func()
+print(answer)
+
+
+22. Largest subarray with 0 sum
+class GfG
+{
+    
+    int maxLen(int arr[], int n)
+    {
+        
+        // Your code here
+        HashMap<Integer,Integer>a=new HashMap<>();
+        int s=0;
+        int count=0;
+        a.put(0,-1);
+        for(int i=0;i<n;i++)
+        {
+            s=s+arr[i];
+            if(s==0 || a.containsKey(s))
+            {
+                count=Math.max(count,i-a.get(s));
+            }
+            else
+            {
+                a.put(s,i);
+            
+        }
+       
+    }
+     return count;
+}
+}
+
+
+23.Find duplicates in an array
+
+
+class Solution {
+    public static ArrayList<Integer> duplicates(int arr[], int n) { 
+        
+        // code here
+        int a[]= new int [n];
+      int c=0;
+      ArrayList<Integer> list = new ArrayList<>();
+      for(int i=0;i<n;i++)
+      {
+          a[arr[i]]=a[arr[i]]+1;
+      }
+      for(int j=0;j<n;j++)
+      {
+          if(a[j]>1){
+           list.add(j);
+          c++;
+              
+          }
+           else
+               continue;
+      }
+      if(c==0)
+      {
+       list.add(-1);
+           return list;
+      }
+      
+       else
+           return list;
+    }
+}
+
+
+
+=======
 #python
 a = []
 n=int(input("enter total number of elements to be added in array:"))
@@ -451,3 +686,4 @@ static int[] printArray(int[] arr){
     System.out.println("First,middle,last element of array is");
     return nums;
 }
+
