@@ -312,6 +312,13 @@ Solution :
 
 13. Convert Age -> Days (Consider leap years in between) take year of birth as input also.
 Solution : 
+#python
+from datetime import datetime, timedelta
+my_DOB = datetime(2002, 4, 30)
+todays_date = datetime.today()
+age_in_days = todays_date - my_DOB
+print("The age in days and time for the Given DOB = ", age_in_days)
+
 
 14. Create a function that finds the maximum range of a triangle's third edge, where the side lengths are all integers. Note. (side1 + side2) - 1 = maximum range of third edge.
 Solution : // C++ implementation of the approach
