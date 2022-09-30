@@ -46,8 +46,48 @@ Systme.out.print("Not palindromic");
 }
 }
 
+#CPP
+class Solution{
+public:	
+	int isPalindrome(string S)
+	{
+	       int ch=0;
+         string st;
+         while(S[ch]!='\0'){
+            st+=S[ch];
+            ch++;
+          }
+          string newst;
+          for(int i=ch-1;i>=0;i--){
+          newst+=S[i];
+          }
+          if(newst==st){
+            return 1;
+          }
+          return 0;
+	}
+
+};
+
 4. Write a function that tests whether a number is a palindrome.
 Solution : 
+#Python
+# Python program to check if number is Palindrome
+
+def isPalindrome(n):  #user-defined function
+    # calculate reverse of number
+    temp=n
+    reverse = 0
+    reminder = 0
+    while(n != 0):
+        remainder = n % 10
+        reverse = reverse * 10 + remainder
+        n = int(n / 10)
+    if(temp== reverse):
+        return 1
+    else:
+        return 0
+
 
 5. Write a function on_all that applies a function to every element of a list. Use it to print the first twenty perfect squares. The perfect squares can be found by multiplying each natural number with itself. The first few perfect squares are 1*1= 1, 2*2=4, 3*3=9, 4*4=16. Twelve for example is not a perfect square because there is no natural number m so that m*m=12.
 Solution : 
@@ -115,6 +155,22 @@ Solution :
 
 9. Write functions that add, subtract, and multiply digits of two numbers.
 Solution : 
+#python
+
+def add(a,b):
+    return a+b;
+def sub(a,b):
+    return a-b;
+def multiply(a,b):
+    return a*b;
+
+f1=add(5,5.2)
+f2=sub(5,4.2)
+f3=multiply(5,5.2)
+print("Addition: ", f1)
+print("substraction: ", f2)
+print("multiplication: ", f3)
+
 
 10. Implement binary search.
 Solution : 
@@ -140,7 +196,30 @@ class Solution {
 }
 
 
-
+=======
+#Java
+ class binarySearch {
+  public int search(int[] nums, int target) {
+    int key, start = 0, end = nums.length - 1;
+    while (start <= end) {
+      key = (start+end)/2  
+      if (nums[key] == target){
+        return key;
+      } 
+      if (target < nums[key]){
+        end = key - 1;
+     }
+      else {
+        left = key + 1;
+        }
+    }
+    return -1;
+  }
+ public static void main(String args[]){  
+        int arr[] = {10,20,30,40,50};  
+        binarySearch(arr,30);     
+ }   
+}
 def binary_search(list1, n):  
     low = 0  
     high = len(list1) - 1  
@@ -291,3 +370,44 @@ Solution :
 19. Given a string S,of length N that is indexed from 0 to N-1, print its even-indexed and odd-indexed characters as 2 space-separated strings on a single line.
     I/P -> Gaurav   O/P -> Gua arv
 Solution : 
+
+
+
+
+20 .Sort an array of 0s, 1s and 2s (Given an array of size N containing only 0s, 1s, and 2s; sort the array in ascending order.)
+/// java 
+class Solution
+{
+    public static void sort012(int arr[], int n)
+    {
+        // code here 
+        int zero =0;
+        int one =0;
+        int two =0;
+        for(int i =0; i<n;i++){
+            if (arr[i]==0){
+                zero++;
+            }
+            else if(arr[i]==1){
+                one++;
+            }
+            else{
+                two++ ;
+                
+            }
+        }
+        for(int i=0;i<n;i++){
+            if (zero>0){
+                arr[i]=0;
+                zero--;
+            }
+            else if(one>0){
+                arr[i]=1;
+                one--;
+            }
+            else{
+                arr[i]=2;
+            }
+        }
+    }
+}
