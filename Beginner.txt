@@ -407,6 +407,19 @@ Solution : 	# define a function for calculating
 
 21. Return first, middle & last element of array.
 Solution : 
+#python
+a = []
+n=int(input("enter total number of elements to be added in array:"))
+for i in range(0,n):
+    
+    x=input("Enter element to add in array:")
+    a.append(x)
+print("Array: ", a)
+mid=(0+arr.length-1)/2;
+print("first element is" ,a[0])
+print("last element is", a[-1])
+print("middle element is",a[mid])
+=======
 #Java
 static int[] printArray(int[] arr){
     int mid=(0+arr.length-1)/2;
