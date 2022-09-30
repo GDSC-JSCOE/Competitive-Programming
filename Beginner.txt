@@ -39,13 +39,13 @@ Solution :
 using namespace std;
 int main()
 {
-    int n, a;
-    a = 0;
+    int n, ans;
+    ans = 0;
     cin >> n;
     n++;
     while (n--)
     {
-        a = a + n;
+        ans = ans + n;
     }
     cout << a;
     return 0;
@@ -344,14 +344,3 @@ Solution :
 
 21. Return first, middle & last element of array.
 Solution : 
-#Java
-static int[] printArray(int[] arr){
-    int mid=(0+arr.length-1)/2;
-    int[] nums=new int[3];
-    //Storing values in new array
-    nums[0]=arr[0];
-    nums[1]=arr[mid];
-    nums[2]=arr[arr.length-1];
-    System.out.println("First,middle,last element of array is");
-    return nums;
-}
