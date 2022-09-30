@@ -137,33 +137,6 @@ def isPalindrome(n):  #user-defined function
 5. Write a function on_all that applies a function to every element of a list. Use it to print the first twenty perfect squares. The perfect squares can be found by multiplying each natural number with itself. The first few perfect squares are 1*1= 1, 2*2=4, 3*3=9, 4*4=16. Twelve for example is not a perfect square because there is no natural number m so that m*m=12.
 Solution : 
 
-#include <bits/stdc++.h>
-using namespace std;
-
-
-void perfectSquares(float l, float r)
-{
-
-	// For every element from the range
-	for (int i = l; i <= r; i++) {
-
-		// If current element is
-		// a perfect square
-		if (sqrt(i) == (int)sqrt(i))
-			cout << i << " ";
-	}
-}
-
-int main()
-{
-	int l = 0, r = 20;
-
-	perfectSquares(l, r);
-
-	return 0;
-}
-
-
 6. Write a function that combines two arrays by alternatingly taking elements, e.g. [a,b,c], [1,2,3] → [a,1,b,2,c,3].
 Solution : 
 #CPP
@@ -700,6 +673,48 @@ class Solution
 
 22. Print all permutation of String both iterative and Recursive way?
 Solution : 
+#CPP
+//Using Recursion//
+void permute(string str, int l, int r) 
+{ 
+    // Base case 
+    if (l == r) 
+        cout<< str <<endl; 
+    else
+    { 
+        // Permutations made 
+        for (int i = l; i <= r; i++) 
+        { 
+  
+            // Swapping done 
+            swap(str[l], str[i]); 
+  
+            // Recursion called 
+            permute(str, l+1, r); 
+  
+            //backtrack 
+            swap(str[l], str[i]); 
+        } 
+    } 
+} 
+
+//Using Iteration//
+// Function to print permutations of string str
+// using next_permutation()
+// Using STL
+void permute(string str)
+{
+    // Sort the string in lexicographically
+    // ascending order
+    sort(str.begin(), str.end());
+ 
+    // Keep printing next permutation while there
+    // is next permutation
+    do {
+       cout << str << endl;
+    } while (next_permutation(str.begin(), str.end()));
+}
+ 
 
 23. Given two arrays, 1,2,3,4,5 and 2,3,1,0,5 find which number is not present in the second array.
 Solution :
