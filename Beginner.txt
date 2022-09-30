@@ -1,5 +1,5 @@
- Example : 
- Solution :
+Example : 
+Solution :
 # Python  
 age=input(int("Age : "))
 print(age);
@@ -42,7 +42,7 @@ Solution :
 
 3. Write a program that asks the user for a number n and prints the sum of the numbers 1 to n
 Solution : 
- #include <iostream>
+//include <iostream>
 using namespace std;
 int main()
 {
@@ -58,8 +58,8 @@ int main()
     return 0;
 }
 
-another method 
-  #include <iostream>
+//another method 
+include <iostream>
 using namespace std;
 int main()
 {
@@ -69,6 +69,7 @@ int main()
     cout << (n*(n+1))/2;
     return 0;
 }
+
 #solved Q no 3 using python
 #python
 num = int(input("Enter numer n: "))
@@ -82,8 +83,6 @@ else:
        sum += num
        num -= 1
    print("The sum is", sum)
-
-  
 
 4. Modify the previous program (i.e. Q.3) such that only multiples of three or five are considered in the sum, e.g. 3, 5, 6, 9, 10, 12, 15 for n=17
 Solution : 
@@ -109,7 +108,6 @@ int main()
 5. Write a program that asks the user for a number n and gives them the possibility to choose between computing the sum and computing the product of 1,…,n.
 Solution : 
 
-
 x=int(input('Enter a number :'))
 y=input('Compute the sum or Compute the product(s/m) ? :')
 sum=0
@@ -123,8 +121,6 @@ if y=='s':
     print('Sum :',sum)    
 if y=='m':
     print('Product :',multi)
-
-
 
 6. Write a program that prints a multiplication table for numbers up to 12.
 Solution : 
@@ -189,56 +185,29 @@ for i in range(x,y+1):
 Solution : 
 Code:
 #include<stdio.h>
-
-int nr_leap_years(int y)
-
-{
-
+int nr_leap_years(int y){
 return( y/4 - y/100 + y/400 );
-
 }
 
 int is_leap_year(int y)
-
 {
-
 return(nr_leap_years(y) - nr_leap_years(y-1));
-
 }
 
-int main(void)
-
-{
-
+int main(void){
 int nr,i;
-
 nr = 0;
-
 i = 2021;
 
-while(nr<20)
-
-{
-
-if (is_leap_year(i))
-
-{
-
+while(nr<20){
+if (is_leap_year(i)){
 printf(“\n %d”, i);
-
 nr++;
-
 }
-
 i++;
-
 }
-
 return(0);
-
 }
-
-Code End
 
 9. Write a function that returns the largest element in a array.
 Solution : 
@@ -282,23 +251,18 @@ int main() {
 
   return 0;
 }
-Solution : function Checking(x)
-a=([1,3,5,8,9]);
-if x==a
-    disp('It is an element')
-else 
-    disp('Not an element')
-end
 
 11. Write a function that returns the elements on odd positions in a list.
-Solution : # Python code to return the elements on odd positions in a list.
+Solution : 
+# Python code to return the elements on odd positions in a list.
 a = [41, 19, 74, 107, 12309, -82, 64, 39, 501, 124, 70, 1111]
 length_of_a = len(a)
 for i in range(1, length_of_a, 2):
     print(a[i], end=" ")
 
 12. Write three functions that compute the sum of the numbers in a array: using a for-loop, a while-loop and recursion.
-Solution :  class code{
+Solution :  
+class code{
 public static void main(String[] args){
 int[] arr={1,2,3,4,5};
 int ans1=usingfor(arr);
@@ -353,15 +317,12 @@ public class Concat {
 14. Write a function that merges two sorted into a new sorted list. [1,4,6],[2,3,5] → [1,2,3,4,5,6]. You can do this quicker than concatenating them followed by a sort.
 Solution : 
 
-
 def merge(list1,list2):
     print(sorted(list1 + list2))
     
 list1 = [1,2,3,4,5]
 list2= [10,20,30,40,50,60]
 merge(list1,list2)
-
-
 
 15. Write a function that computes the list of the first n Fibonacci numbers. The first two Fibonacci numbers are 1 and 1. The first few are therefore 1, 1, 1+1=2, 1+2=3, 2+3=5, 3+5=8.
 Solution : 
@@ -394,16 +355,19 @@ def factorial(n):
         return 1
     else:
         return n*factorial(n-1)
+
 17. Print the following pattern without using print in-built function.
 i.      ii.     iii.
 ***     123     321
 ***     123     321
 ***     123     321
+
 Solution : 
 
 
 18. Convert i. Minutes -> Seconds 
             ii. Fahrenheit -> Celsius -> Kelvin
+
 Solution : #include<stdio.h>
 #include<conio.h>
 int main()
@@ -423,8 +387,6 @@ int main()
 
 19. Design a quiz game which take answer as input to given question (atleast 5) and print final result(Total marks & percentage). +2 for Correct answer, -0.5 for Incorrect.
 Solution : 
-
-
 def new_game():
 
     guesses = []
@@ -508,75 +470,72 @@ while play_again():
 
 print("Byeeeeee!")
 
-
-
-
-
 20. Design a tool which find area & perimeter of different shapes.
-Solution : 	# define a function for calculating
-	   	# the area of a shapes
-		def calculate_area(name):\
-   
-  			# converting all characters
-  			# into lower cases
-  			name = name.lower()
-   
-  			# check for the conditions
-  			if name == "rectangle":
-    				l = int(input("Enter rectangle's length: "))
-    				b = int(input("Enter rectangle's breadth: "))
-     
-    				# calculate area of rectangle
-    				rect_area = l * b
-    				print(f"The area of rectangle is {rect_area}.")
-          		
+Solution : 	
+# define a function for calculating
+# the area of a shapes
+def calculate_area(name):\
 
-  			elif name == "square":
-    				s = int(input("Enter square's side length: "))
-       
-    				# calculate area of square
-    				sqt_area = s * s
-    				print(f"The area of square is {sqt_area}.")
-          
- 
-  			elif name == "triangle":
-   				h = int(input("Enter triangle's height length: "))
-    				b = int(input("Enter triangle's breadth length: "))
-       
-    				# calculate area of triangle
-    				tri_area = 0.5 * b * h
-    				print(f"The area of triangle is {tri_area}.")
-          
- 
-  			elif name == "circle":
-    				r = int(input("Enter circle's radius length: "))
-    				pi = 3.14
-         
-    				# calculate area of circle
-    				circ_area = pi * r * r
-    				print(f"The area of circle is {circ_area}.")
-          
-         
-  			elif name == 'parallelogram':
-    				b = int(input("Enter parallelogram's base length: "))
-    				h = int(input("Enter parallelogram's height length: "))
-     
-    				# calculate area of parallelogram
-    				para_area = b * h
-    				print(f"The area of parallelogram is
-          			{para_area}.")
-     
-  			else:
-   				print("Sorry! This shape is not available")
- 
-		# driver code
-		if __name__ == "__main__" :
-   
-  		print("Calculate Shape Area")
-  		shape_name = input("Enter the name of shape whose area you want to find: ")
-   
-  		# function calling
-  		calculate_area(shape_name)
+	# converting all characters
+	# into lower cases
+	name = name.lower()
+
+	# check for the conditions
+	if name == "rectangle":
+		l = int(input("Enter rectangle's length: "))
+		b = int(input("Enter rectangle's breadth: "))
+
+		# calculate area of rectangle
+		rect_area = l * b
+		print(f"The area of rectangle is {rect_area}.")
+
+
+	elif name == "square":
+		s = int(input("Enter square's side length: "))
+
+		# calculate area of square
+		sqt_area = s * s
+		print(f"The area of square is {sqt_area}.")
+
+
+	elif name == "triangle":
+		h = int(input("Enter triangle's height length: "))
+		b = int(input("Enter triangle's breadth length: "))
+
+		# calculate area of triangle
+		tri_area = 0.5 * b * h
+		print(f"The area of triangle is {tri_area}.")
+
+
+	elif name == "circle":
+		r = int(input("Enter circle's radius length: "))
+		pi = 3.14
+
+		# calculate area of circle
+		circ_area = pi * r * r
+		print(f"The area of circle is {circ_area}.")
+
+
+	elif name == 'parallelogram':
+		b = int(input("Enter parallelogram's base length: "))
+		h = int(input("Enter parallelogram's height length: "))
+
+		# calculate area of parallelogram
+		para_area = b * h
+		print(f"The area of parallelogram is
+		{para_area}.")
+
+	else:
+		print("Sorry! This shape is not available")
+
+# driver code
+if __name__ == "__main__" :
+
+print("Calculate Shape Area")
+shape_name = input("Enter the name of shape whose area you want to find: ")
+
+# function calling
+calculate_area(shape_name)
 
 21. Return first, middle & last element of array.
 Solution :
@@ -594,6 +553,7 @@ print(answer)
 
 
 22. Largest subarray with 0 sum
+Solution : 
 class GfG
 {
     
@@ -625,8 +585,7 @@ class GfG
 
 
 23.Find duplicates in an array
-
-
+Solution :
 class Solution {
     public static ArrayList<Integer> duplicates(int arr[], int n) { 
         
@@ -659,8 +618,6 @@ class Solution {
     }
 }
 
-
-
 =======
 #python
 a = []
@@ -674,6 +631,7 @@ mid=(0+arr.length-1)/2;
 print("first element is" ,a[0])
 print("last element is", a[-1])
 print("middle element is",a[mid])
+
 =======
 #Java
 static int[] printArray(int[] arr){
