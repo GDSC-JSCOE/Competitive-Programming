@@ -1,84 +1,24 @@
- Example : 
- Solution :
+ : 
+Solution :
 # Python  
 age=input(int("Age : "))
 print(age);
                                                                                                                                                Maintainer : Gaurav-2803
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+0. Create a function that finds the maximum range of a triangle's third edge, where the side lengths are all integers. Note. (side1 + side2) - 1 = maximum range of third edge.
+Solution :
+
 1. You are given an integer 'N', your task is to find and return thr N'th Fibonacci Number using Matrix Exponentiation.
 Solution : 
-#Java
-class FibonacciExample1{
-public static void main(String args[])
-{
- int n1=0,n2=1,n3,i,count=10;
- System.out.print(n1+" "+n2);//printing 0 and 1
 
- for(i=2;i<count;++i)//loop starts from 2 because 0 and 1 are already printed
- {
-  n3=n1+n2;
-  System.out.print(" "+n3);
-  n1=n2;
-  n2=n3;
- }
-
-}}
 2. Write functions that add, subtract, and multiply two numbers in their digit-list representation (and return a new digit list) using Karatsuba multiplication.
 Solution :
 
 3. Implement the following sorting algorithms: Selection sort, Insertion sort, Merge sort, Quick sort, Stooge Sort.
 Solution :
 
-4. Write function that translates a text to Pig Latin and back. English is translated to Pig Latin by taking the first letter of every word, moving it to the
-
-
-
-
-
-
-
-end of the word and adding ‘ay’. “The quick brown fox” becomes “Hetay uickqay rownbay oxfay”.
-
-
-
-
-
-
-
-
-
-
-
-
-14. Create a function that finds the maximum range of a triangle's third edge, where the side lengths are all integers. Note. (side1 + side2) - 1 = maximum range of third edge.
-Solution : // C++ implementation of the approach
-#include <iostream>
-using namespace std;
- 
-// Function to find the minimum and the
-// maximum possible length of the third
-// side of the given triangle
-void find_length(int s1, int s2)
-{
- 
-    // Not a valid triangle
-    if (s1 <= 0 || s2 <= 0) {
-        cout << -1;
-        return;
-    }
-    int max_length = s1 + s2 - 1;
-    int min_length = max(s1, s2) - min(s1, s2) + 1;
- 
-    // Not a valid triangle
-    if (min_length > max_length) {
-        cout << -1;
-        return;
-    }
- 
-    cout << "Max = " << max_length << endl;
-    cout << "Min = " << min_length;
-}
- 
+4. Write function that translates a text to Pig Latin and back. English is translated to Pig Latin by taking the first letter of every word, moving it to the end of the word and adding ‘ay’. “The quick brown fox” becomes “Hetay uickqay rownbay oxfay”.
 Solution :
 
 5. Write a program that outputs all possibilities to put + or - or nothing between the numbers 1,2,…,9 (in this order) such that the result is 100. For example 1 + 2 + 3 - 4 + 5 + 6 + 78 + 9 = 100
