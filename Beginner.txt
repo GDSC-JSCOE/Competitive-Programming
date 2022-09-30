@@ -801,3 +801,12 @@ int findEquilibrium(int A[], int n)
   return -1;
   
 }
+
+
+29. Polynomials
+
+import numpy as np
+
+poly = [float(x) for x in input().split()]
+x = float(input())
+print(np.polyval(poly, x))
