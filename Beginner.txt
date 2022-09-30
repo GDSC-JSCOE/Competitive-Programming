@@ -51,6 +51,18 @@ int main()
     return 0;
 }
 
+another method 
+  #include <iostream>
+using namespace std;
+int main()
+{
+    int n, a;
+    a = 0;
+   cin>>n;
+    cout << (n*(n+1))/2;
+    return 0;
+}
+
   
 
 4. Modify the previous program (i.e. Q.3) such that only multiples of three or five are considered in the sum, e.g. 3, 5, 6, 9, 10, 12, 15 for n=17
