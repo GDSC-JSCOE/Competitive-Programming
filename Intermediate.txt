@@ -9,6 +9,40 @@ print(age);
 At the end the number of tries needed should be printed. It counts only as one try if they input the same number multiple times consecutively.
 Solution : 
 
+#Python
+import getpass
+print("THE GUESSING GAME!\n")
+no = int(getpass.getpass("Enter any Number for Friend to Guess: "))
+i = 1
+while (True):
+    temp = int(input("\nEnter Your Guess "))
+    if temp == no:
+        print("Correct Guess!")
+        print("You WON!! \n")
+        if i==1:
+            print("You did it in", i, "Guess! Yay!")
+        elif i>=2 and i<=4:
+            print("You did it in only", i, "Guesses!")
+        elif i>=5 and i<=8:
+            print("You did it in", i, "Guesses!")
+        else:
+            print("You required", i,"Guesses :(")
+        break
+    elif temp<no:
+        print("Your guess is Less!")
+        print("Try Again. \n")
+    else:
+        print("Your guess is Large!")
+        print("Try Again. \n")
+    if i==1:
+        prev_no=temp
+        i+=1
+    elif prev_no==temp:
+        pass
+    else:
+        prev_no=temp
+        i += 1
+
 2. Write function that reverses a array, preferably in place.
 Solution : 
 #CPP
