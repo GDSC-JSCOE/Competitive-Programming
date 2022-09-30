@@ -58,7 +58,7 @@ StringBuilder ans=new StringBuilder();
 ans.append(str);
 ans.reverse;
 str1=ans.toString();
-if(str==str){
+if(str1==str){
 System.out.print("Palindromic");
 }
 Systme.out.print("Not palindromic");
