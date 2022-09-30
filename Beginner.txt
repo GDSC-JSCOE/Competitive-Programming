@@ -86,6 +86,7 @@ int main()
     return 0;
 }
 
+
 5. Write a program that asks the user for a number n and gives them the possibility to choose between computing the sum and computing the product of 1,…,n.
 Solution : 
 
@@ -107,7 +108,48 @@ int main()
 
 7. Write a program that prints all prime numbers between 2 numbers. 
 Solution : 
+ #include <bits/stdc++.h>
+using namespace std;
+ 
+int main()
+{
+     
+    int a, b, i, j, flag;
+    cout << "Enter lower bound of the interval: ";
+    cin >> a; // Take input
 
+    cout << "\nEnter upper bound of the interval: ";
+    cin >> b; // Take input
+ 
+    
+    cout << "\nPrime numbers between "
+         << a << " and " << b << " are: ";
+ 
+     
+    for (i = a; i <= b; i++) {
+        // Skip 0 and 1 as they are
+        // neither prime nor composite
+        if (i == 1 || i == 0)
+            continue;
+ 
+         
+        flag = 1;
+ 
+        for (j = 2; j <= i / 2; ++j) {
+            if (i % j == 0) {
+                flag = 0;
+                break;
+            }
+        }
+ 
+        
+        if (flag == 1)
+            cout << i << " ";
+    }
+ 
+    return 0;
+}
+ 
 8. Write a program that prints the next 20 leap years.
 Solution : 
 Code:
