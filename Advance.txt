@@ -7,7 +7,22 @@ print(age);
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 1. You are given an integer 'N', your task is to find and return thr N'th Fibonacci Number using Matrix Exponentiation.
 Solution : 
+#Java
+class FibonacciExample1{
+public static void main(String args[])
+{
+ int n1=0,n2=1,n3,i,count=10;
+ System.out.print(n1+" "+n2);//printing 0 and 1
 
+ for(i=2;i<count;++i)//loop starts from 2 because 0 and 1 are already printed
+ {
+  n3=n1+n2;
+  System.out.print(" "+n3);
+  n1=n2;
+  n2=n3;
+ }
+
+}}
 2. Write functions that add, subtract, and multiply two numbers in their digit-list representation (and return a new digit list) using Karatsuba multiplication.
 Solution :
 
