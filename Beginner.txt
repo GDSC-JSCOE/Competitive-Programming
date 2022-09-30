@@ -55,6 +55,24 @@ int main()
 
 4. Modify the previous program (i.e. Q.3) such that only multiples of three or five are considered in the sum, e.g. 3, 5, 6, 9, 10, 12, 15 for n=17
 Solution : 
+#include <iostream>
+using namespace std;
+int main()
+{
+    int n, a;
+    a = 0;
+    cin >> n;
+    n++;
+    while (n--)
+    {
+        if (n % 3 == 0 || n % 5 == 0)
+        {
+            a = a + n;
+        }
+    }
+    cout << a;
+    return 0;
+}
 
 5. Write a program that asks the user for a number n and gives them the possibility to choose between computing the sum and computing the product of 1,…,n.
 Solution : 
