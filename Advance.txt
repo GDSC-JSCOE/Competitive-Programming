@@ -7,6 +7,43 @@ print(age);
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 0. Create a function that finds the maximum range of a triangle's third edge, where the side lengths are all integers. Note. (side1 + side2) - 1 = maximum range of third edge.
+// C++ implementation of the approach
+#include <iostream>
+using namespace std;
+
+// Function to find the minimum and the
+// maximum possible length of the third
+// side of the given triangle
+void find_length(int s1, int s2)
+{
+
+	// Not a valid triangle
+	if (s1 <= 0 || s2 <= 0) {
+		cout << -1;
+		return;
+	}
+	int max_length = s1 + s2 - 1;
+	int min_length = max(s1, s2) - min(s1, s2) + 1;
+
+	// Not a valid triangle
+	if (min_length > max_length) {
+		cout << -1;
+		return;
+	}
+
+	cout << "Max = " << max_length << endl;
+	cout << "Min = " << min_length;
+}
+
+// Driver code
+int main()
+{
+	int s1 = 8, s2 = 5;
+	find_length(s1, s2);
+
+	return 0;
+}
+
 Solution :
 
 1. You are given an integer 'N', your task is to find and return thr N'th Fibonacci Number using Matrix Exponentiation.
