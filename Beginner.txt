@@ -702,3 +702,24 @@ K=0;
   }
   return 0;
 }
+26.Split the array into equal sum subarrays.
+======================================
+sample = [2, 4, 5, 1, 2, 3]
+ 
+sum = 0
+ 
+sum_left=[]
+for val in sample:
+    sum += val
+    sum_left.append(sum)
+     
+sum_right=[]
+for val in sample:
+    sum_right.append(sum)
+    sum -= val
+
+for i in range(len(sum_left)):
+    if sum_left[i] == sum_right[i]:
+        print(f"Matching index is {i}.")
+        break
+	}
