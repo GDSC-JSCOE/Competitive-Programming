@@ -723,3 +723,29 @@ for i in range(len(sum_left)):
         print(f"Matching index is {i}.")
         break
 	}
+
+27. Check whether the given number is armstrong or not.
+=======================================================
+#include<iostream>
+#include<bits/stdc++.h>
+using namespace std;
+
+int main(){
+    int n;
+    cin>>n;
+    int sum;
+    int originaln=n;
+    
+    while (n!=0)
+    {
+        int lastdigit=n%10;
+        sum += pow(lastdigit,3);
+        n=n/10;
+    }
+    if(sum==originaln){
+        cout<<"armstrong";
+    }
+    else{
+        cout<<"non armstrong";
+    }
+}
