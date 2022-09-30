@@ -22,3 +22,16 @@ Solution :
 
 6. Sort array of 0s,1s and 2s in a single scan (Visiting each element once).
 Solution :
+
+7. The n-queens puzzle is the problem of placing n queens on an n x n chessboard such that no two queens attack each other.
+Given an integer n, return all distinct solutions to the n-queens puzzle. You may return the answer in any order.
+Each solution contains a distinct board configuration of the n-queens' placement, where 'Q' and '.' both indicate a queen and an empty space, respectively.
+      I/O -> n = 4   O/P -> [[".Q..","...Q","Q...","..Q."],["..Q.","Q...","...Q",".Q.."]]
+Solution : 
+
+8. Lexicographical order is often known as alphabetical order when dealing with strings. A string is greater than another string if it comes later in a lexicographically sorted list.
+Given a word, create a new word by swapping some or all of its characters. This new word must meet two criteria:
+  It must be greater than the original word
+  It must be the smallest word that meets the first condition
+      I/O -> abcd   O/P -> abdc  
+Solution :          
