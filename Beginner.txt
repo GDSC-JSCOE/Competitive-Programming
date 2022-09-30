@@ -58,7 +58,11 @@ Solution :
 Solution : 
 
 11. Write a function that returns the elements on odd positions in a list.
-Solution : 
+Solution : # Python code to return the elements on odd positions in a list.
+a = [41, 19, 74, 107, 12309, -82, 64, 39, 501, 124, 70, 1111]
+length_of_a = len(a)
+for i in range(1, length_of_a, 2):
+    print(a[i], end=" ")
 
 12. Write three functions that compute the sum of the numbers in a array: using a for-loop, a while-loop and recursion.
 Solution : 
