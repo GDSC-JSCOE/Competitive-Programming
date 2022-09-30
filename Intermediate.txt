@@ -5,12 +5,30 @@ age=input(int("Age : "))
 print(age);
                                                                                                                                                Maintainer : Gaurav-2803
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
-1. Write a guessing game where the user has to guess a secret number. After every guess the program tells the user whether their number was too large or too small. At the end the number of tries needed should be printed. It counts only as one try if they input the same number multiple times consecutively.
+1. Write a guessing game where the user has to guess a secret number. After every guess the program tells the user whether  their number was too large or too small. At the end the number of tries needed should be printed. It counts only as one try if they input the same number multiple times consecutively.
 Solution : 
 
 2. Write function that reverses a array, preferably in place.
 Solution : 
- 
+#Java
+static void reverseArray(int[] intArray,int size){
+        int i, temp; 
+        for (i = 0; i < size/ 2; i++) { 
+            
+            //store first index value at temp
+            temp = intArray[i]; 
+            
+            //store lastIndex-i-1 value in i'th Index
+            intArray[i] = intArray[size - i - 1]; 
+            
+            //store temp value at lastIndex-i-1 
+            intArray[size - i - 1] = temp; 
+
+            //Loop will run till the mid position of given array
+        } 
+        //printing the reversed Array
+        System.out.println(Arrays.toString(intArray)); 
+}
 3. Write a function that tests whether a string is a palindrome.
 Solution : 
 
@@ -23,11 +41,13 @@ Solution :
 6. Write a function that combines two arrays by alternatingly taking elements, e.g. [a,b,c], [1,2,3] → [a,1,b,2,c,3].
 Solution : 
 
+
 7. Write a function that rotates a array by k elements. For example [1,2,3,4,5,6] rotated by two becomes [3,4,5,6,1,2]. Try solving this without creating a copy of the array. How many swap or move operations do you need?
 Solution : 
 
 8. Write a function that takes a number and returns a array of its digits. So for 2342 it should return [2,3,4,2].
 Solution : 
+
 
 9. Write functions that add, subtract, and multiply digits of two numbers.
 Solution : 
@@ -63,13 +83,87 @@ Solution :
 Solution : 
 
 14. Create a function that finds the maximum range of a triangle's third edge, where the side lengths are all integers. Note. (side1 + side2) - 1 = maximum range of third edge.
-Solution : 
+Solution : // C++ implementation of the approach
+#include <iostream>
+using namespace std;
+ 
+// Function to find the minimum and the
+// maximum possible length of the third
+// side of the given triangle
+void find_length(int s1, int s2)
+{
+ 
+    // Not a valid triangle
+    if (s1 <= 0 || s2 <= 0) {
+        cout << -1;
+        return;
+    }
+    int max_length = s1 + s2 - 1;
+    int min_length = max(s1, s2) - min(s1, s2) + 1;
+ 
+    // Not a valid triangle
+    if (min_length > max_length) {
+        cout << -1;
+        return;
+    }
+ 
+    cout << "Max = " << max_length << endl;
+    cout << "Min = " << min_length;
+}
+ 
+// Driver code
+int main()
+{
+    int s1 = 8, s2 = 5;
+    find_length(s1, s2);
+ 
+    return 0;
+}
 
 15. Write a function that takes number K where is smaller than size of array, we need to find the Kth smallest and largest elementin the given array.It is given that all array elements are not distinct and If not present return -1. 
 Solution : 
 
 16. Write a function that sort array of 0s, 1s & 2s (inbuilt sort functions are not allowed)
-Solution : 
+Solution : # Python program to sort an array with
+# 0, 1 and 2 in a single pass
+ 
+# Function to sort array
+ 
+ 
+def sort012(a, arr_size):
+    lo = 0
+    hi = arr_size - 1
+    mid = 0
+    # Iterate till all the elements
+    # are sorted
+    while mid <= hi:
+        # If the element is 0
+        if a[mid] == 0:
+            a[lo], a[mid] = a[mid], a[lo]
+            lo = lo + 1
+            mid = mid + 1
+        # If the element is 1
+        elif a[mid] == 1:
+            mid = mid + 1
+        # If the element is 2
+        else:
+            a[mid], a[hi] = a[hi], a[mid]
+            hi = hi - 1
+    return a
+ 
+# Function to print array
+ 
+ 
+def printArray(a):
+    for k in a:
+        print(k, end=' ')
+ 
+ 
+# Driver Program
+arr = [0, 1, 1, 0, 1, 2, 1, 2, 0, 0, 0, 1]
+arr_size = len(arr)
+arr = sort012(arr, arr_size)
+printArray(arr)
 
 17. Given Unsorted array check whether elements are in Arithmetic Progression (Differnce between every 2 consecutive is same) if not return -1.
 Example : 1,2,3,4,5 are in A.P
