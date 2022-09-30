@@ -534,7 +534,23 @@ public:
 19. Given a string S,of length N that is indexed from 0 to N-1, print its even-indexed and odd-indexed characters as 2 space-separated strings on a single line.
     I/P -> Gaurav   O/P -> Gua arv
 Solution : 
-
+class Main{
+public static void main(String[] args){
+String s="SlamanBhaijaan"
+String ans="";
+for(int i=0; i<s.length(); i++){
+if(i%2==0){
+ans=ans+s.charAt(i);
+}
+}
+ans=ans+" ";
+for(int i=0; i<s.length(); i++){
+if(i%2!=0){
+ans=ans+s.charAt(i);
+}
+}
+return ans;
+}
 
 
 
