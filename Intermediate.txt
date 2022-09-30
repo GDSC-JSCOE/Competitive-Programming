@@ -596,6 +596,25 @@ ans=ans+s.charAt(i);
 return ans;
 }
 
+solution;
+#python
+n=int(input("enter the length of string"))
+s=input("enter the string")
+eve=[]
+odd=[]
+result=[]
+for i in range (0,n):
+    if i%2==0:
+        eve.append(s[i])
+    else:
+        
+        odd.append(s[i])
+d=' '.join(eve)
+e=' '.join(odd)
+result.append(d)
+result.append(e)
+print(' '.join(result))
+
 
 
 20 .Sort an array of 0s, 1s and 2s (Given an array of size N containing only 0s, 1s, and 2s; sort the array in ascending order.)
