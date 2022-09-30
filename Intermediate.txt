@@ -59,6 +59,41 @@ Solution :
 7. Write a function that rotates a array by k elements. For example [1,2,3,4,5,6] rotated by two becomes [3,4,5,6,1,2]. Try solving this without creating a copy of the array. How many swap or move operations do you need?
 Solution : 
 
+ 
+class Main
+{
+    public static void rightRotateByOne(int[] A)
+    {
+        int last = A[A.length - 1];
+        for (int i = A.length - 2; i >= 0; i--) {
+            A[i + 1] = A[i];
+        }
+ 
+        A[0] = last;
+    }
+ 
+    public static void rightRotate(int[] A, int k)
+    {
+        if (k < 0 || k >= A.length) {
+            return;
+        }
+ 
+        for (int i = 0; i < k; i++) {
+            rightRotateByOne(A);
+        }
+    }
+ 
+    public static void main(String[] args)
+    {
+        int[] A = { 1, 2, 3, 4, 5, 6, 7 };
+        int k = 3;
+ 
+        rightRotate(A, k);
+ 
+        System.out.println(Arrays.toString(A));
+    }
+}
+
 8. Write a function that takes a number and returns a array of its digits. So for 2342 it should return [2,3,4,2].
 Solution : 
 #Java
