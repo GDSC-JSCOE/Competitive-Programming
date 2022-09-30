@@ -723,16 +723,38 @@ for i in range(len(sum_left)):
         print(f"Matching index is {i}.")
         break
 	}
-#include<stdio.h>
-#include<conio.h>
-int fibonacci(int);
-int main(){ 
-	int n, i; 
-	printf("Enter the number of element you want in series :\n"); 
-	scanf("%d",&n); 
-	printf("fibonacci series is : \n");
-	for(i=0;i<n;i++) { 
-		printf("%d ",fibonacci(i));
+
+27 the minimum numbers of operations required by Chef to make parity of all the elements same.
+=============================================================================================
+#include <iostream>
+using namespace std;
+#define ll long long 
+int main() {
+	// your code goes here
+	int t;
+	cin>>t;
+	while(t--)
+	{
+	    int n;
+	    cin>>n;
+	    ll arr[n];
+	    ll even=0,odd=0;
+	    for(int i=0;i<n;i++)
+	    {
+	        cin>>arr[i];
+	        if(arr[i]%2==1)
+	        {
+	            odd++;
+	        }
+	       
+	    }
+	    if(odd==n || odd== 0)
+	    {
+	        cout<<"0"<<endl;
+	    }
+	    else
+	    {
+	        cout<<n-odd<<endl;
+	    }
 	}
-	getch();
-}
+	return 0;
