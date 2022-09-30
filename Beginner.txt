@@ -17,6 +17,12 @@ Solution :
          cout<<"Hi "+name;
  return 0;
 }
+
+#Solved Q no 1 using python
+#python
+name=input("Enter your name: ")
+print("Hello!,",name)
+
 2. Modify the previous program (i.e. Q.1) such that only the users Alice and Bob are greeted with their names.
 Solution : 
  #include<iostream>
@@ -33,10 +39,6 @@ Solution :
          }
         return 0;
 }
-#Solved Q no 1 using python
-#python
-name=input("Enter your name: ")
-print("Hello!,",name)
 
 3. Write a program that asks the user for a number n and prints the sum of the numbers 1 to n
 Solution : 
