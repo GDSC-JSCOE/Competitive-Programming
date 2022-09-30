@@ -254,6 +254,19 @@ return 0;
 }
 return arr[i]+usingrec(arr,i+1);
 }
+
+}
+1. Write a program that asks the user for their name and greets (Hi!, Hey!, Hello!, etc) them with their name. 
+Example : (Hi!, pratiksha)
+Solution : 
+ #include <iostream>
+ using namespace std;
+ int main(){
+    string name;
+         cout<<" Enter Name  : ";
+         cin>>name;
+         cout<<"Hi "+name;
+ return 0;
 }
 
 
