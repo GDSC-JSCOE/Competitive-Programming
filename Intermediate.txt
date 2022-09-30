@@ -69,6 +69,29 @@ Solution :
 
 10. Implement binary search.
 Solution : 
+#Java
+ class binarySearch {
+  public int search(int[] nums, int target) {
+    int key, start = 0, end = nums.length - 1;
+    while (start <= end) {
+      key = (start+end)/2  
+      if (nums[key] == target){
+        return key;
+      } 
+      if (target < nums[key]){
+        end = key - 1;
+     }
+      else {
+        left = key + 1;
+        }
+    }
+    return -1;
+  }
+ public static void main(String args[]){  
+        int arr[] = {10,20,30,40,50};  
+        binarySearch(arr,30);     
+ }   
+}
 
 11. Write a function that takes a array of strings an prints them, one per line, in a rectangular frame. For example the list ["Hello", "World", "in", "a", "frame"] gets printed as:
 
