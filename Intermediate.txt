@@ -410,6 +410,28 @@ Solution :
 
 18. Given a sorted array of distinct integers and a target value, return the index if the target is found. If not, return the index where it would be if it were inserted in order. You must write an algorithm with O(log n) runtime complexity.
 Solution : 
+//java
+ int binarysearch(int arr[], int n, int k) {
+        int start=0;
+        int end=n-1;
+        int ans=0;
+        while(start<=end){
+            int mid =start +(end-start)/2;
+            if(arr[mid]<k){
+                start=mid+1;
+            }
+            if(arr[mid]>k){
+                end=mid-1;
+            }
+            if(arr[mid]==k) {
+              return mid;
+            }
+            ans=mid;
+        }
+        return ans+1;
+    }
+    
+    
 #CPP
 class Solution{
 public:
