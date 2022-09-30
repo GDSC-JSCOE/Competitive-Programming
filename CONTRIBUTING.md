@@ -18,3 +18,13 @@
               print(name);  
 
 #                 Begin the pull request!!!
+[
+    {
+    name=input("Name : Azim Shaikh")
+    print(name)
+    },
+
+
+
+
+]
