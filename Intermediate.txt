@@ -410,6 +410,37 @@ Solution :
 
 18. Given a sorted array of distinct integers and a target value, return the index if the target is found. If not, return the index where it would be if it were inserted in order. You must write an algorithm with O(log n) runtime complexity.
 Solution : 
+#CPP
+class Solution{
+public:
+    int binarysearch(int arr[], int n, int k){
+        int first=0;
+        int last=n-1;
+        if(arr[0]>k){
+            return 0;
+        }
+        int mid=(first+last)/2;
+        while(first<last){
+            if(arr[mid]==k){
+                return mid;
+            }
+            if(arr[first]==k){
+                return first;
+            }
+            if(arr[last]==k){
+                return last;
+            }
+            if(k<arr[mid]){
+                last=mid-1;
+                mid=(first+last)/2;
+            }else{
+                first=mid+1;
+                mid=(first+last)/2;
+            }
+        }
+        return mid+1;
+    }
+};
 
 19. Given a string S,of length N that is indexed from 0 to N-1, print its even-indexed and odd-indexed characters as 2 space-separated strings on a single line.
     I/P -> Gaurav   O/P -> Gua arv
