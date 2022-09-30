@@ -382,4 +382,40 @@ class GfG
 }
 
 
+23.Find duplicates in an array
+
+
+class Solution {
+    public static ArrayList<Integer> duplicates(int arr[], int n) { 
+        
+        // code here
+        int a[]= new int [n];
+      int c=0;
+      ArrayList<Integer> list = new ArrayList<>();
+      for(int i=0;i<n;i++)
+      {
+          a[arr[i]]=a[arr[i]]+1;
+      }
+      for(int j=0;j<n;j++)
+      {
+          if(a[j]>1){
+           list.add(j);
+          c++;
+              
+          }
+           else
+               continue;
+      }
+      if(c==0)
+      {
+       list.add(-1);
+           return list;
+      }
+      
+       else
+           return list;
+    }
+}
+
+
 
