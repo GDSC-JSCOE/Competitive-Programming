@@ -30,7 +30,26 @@ static void reverseArray(int[] intArray,int size){
         System.out.println(Arrays.toString(intArray)); 
 }
 3. Write a function that tests whether a string is a palindrome.
-Solution : 
+Solution :
+//java
+class Solution {
+    int isPalindrome(String S) {
+      char [] ans=new char[S.length()];
+      for(int i=0;i<S.length();i++){
+          ans[i]=S.charAt(i);
+      }
+      int start=0;
+      int end=S.length()-1;
+      while(start<end){
+          if(ans[start] != ans[end]){
+              return 0;
+          }
+          start++;
+          end--;
+      }
+      return 1;
+    }
+};
 
 4. Write a function that tests whether a number is a palindrome.
 Solution : 
