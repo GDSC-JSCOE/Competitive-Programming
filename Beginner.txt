@@ -110,6 +110,20 @@ int main()
 7. Write a program that prints all prime numbers between 2 numbers. 
 Solution : 
 
+print('Enter two numbers :')
+x=int(input())
+y=int(input())
+print('Prime numbers : ',end=' ')
+for i in range(x,y+1):
+    cnt=0
+    for j in range(1,i+1):
+        if i%j==0:
+            cnt+=1
+    if cnt==2:
+        print(i,end=' ')
+
+
+
 8. Write a program that prints the next 20 leap years.
 Solution : 
 Code:
