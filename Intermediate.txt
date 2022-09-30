@@ -53,6 +53,16 @@ Solution :
 6. Write a function that combines two arrays by alternatingly taking elements, e.g. [a,b,c], [1,2,3] → [a,1,b,2,c,3].
 Solution : 
 
+def new_list(list1, list2):
+    list = []
+    for item1, item2 in zip(list1, list2):
+        list.append(item1)
+        list.append(item2)
+    return list
+new_list([1,2,3],[4,5,6])
+
+
+
 
 7. Write a function that rotates a array by k elements. For example [1,2,3,4,5,6] rotated by two becomes [3,4,5,6,1,2]. Try solving this without creating a copy of the array. How many swap or move operations do you need?
 Solution : 
