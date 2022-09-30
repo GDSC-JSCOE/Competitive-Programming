@@ -172,6 +172,80 @@ Given an integer n, return all distinct solutions to the n-queens puzzle. You ma
 Each solution contains a distinct board configuration of the n-queens' placement, where 'Q' and '.' both indicate a queen and an empty space, respectively.
       I/O -> n = 4   O/P -> [[".Q..","...Q","Q...","..Q."],["..Q.","Q...","...Q",".Q.."]]
 Solution : 
+#CPP
+//Used BackTraking Using Recursion
+void sol(int ind,int n,vector<vector<int>> &v,map<int,int> &row,vector<int> &ds,vector<vector<int>> &flag)
+    {
+        if(ind==n)
+        {
+            v.push_back(ds);
+            return;
+        }
+             
+        
+        for(int i=0;i<n;i++)
+        {
+            if(row[i]==0 && flag[i][ind]==0)
+            { 
+                for(int j=ind,k=i;j<n && k<n;k++,j++)
+                 {
+                   flag[k][j]++;
+                }
+                for(int j=ind,k=i;j<n && k>-1;k--,j++)
+                 {
+                   flag[k][j]++;
+                }
+                row[i]++;
+                ds.push_back(i);
+                sol(ind+1,n,v,row,ds,flag);
+                ds.pop_back();
+                for(int j=ind,k=i;j<n && k<n;k++,j++)
+                 {
+                   flag[k][j]--;
+                }
+                for(int j=ind,k=i;j<n && k>-1;k--,j++)
+                 {
+                   flag[k][j]--;
+                }
+                row[i]--;
+            }   
+        }
+        return;
+    }
+
+    vector<vector<string>> solveNQueens(int n) {
+        vector<vector<int>> v;
+        map<int,int> row;
+        vector<int> ds;
+        vector<vector<int>> flag(n,vector<int> (n,0));
+        sol(0,n,v,row,ds,flag);
+        vector<vector<string>> ans;
+        vector<string> s;
+
+        for(int i=0;i<v.size();i++)
+        {
+            for(int j=0;j<n;j++)
+            {
+                string temp;
+                for(int k=0;k<n;k++)
+                {
+                    if(v[i][k]==j)
+                        temp.append(1,'Q');
+                    else 
+                        temp.append(1,'.');
+                }
+                s.push_back(temp);
+                
+            }
+            ans.push_back(s);
+            s.clear();
+        }
+        
+        
+        return ans;
+        
+        
+    }
 
 8. Lexicographical order is often known as alphabetical order when dealing with strings. A string is greater than another string if it comes later in a lexicographically sorted list.
 Given a word, create a new word by swapping some or all of its characters. This new word must meet two criteria:
