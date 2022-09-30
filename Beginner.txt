@@ -1,0 +1,68 @@
+1. Write a program that asks the user for their name and greets (Hi!, Hey!, Hello!, etc) them with their name. 
+Example : (Hi!, Gaurav)
+Solution : 
+
+2. Modify the previous program (i.e. Q.1) such that only the users Alice and Bob are greeted with their names.
+Solution : 
+
+3. Write a program that asks the user for a number n and prints the sum of the numbers 1 to n
+Solution : 
+
+4. Modify the previous program (i.e. Q.3) such that only multiples of three or five are considered in the sum, e.g. 3, 5, 6, 9, 10, 12, 15 for n=17
+Solution : 
+
+5. Write a program that asks the user for a number n and gives them the possibility to choose between computing the sum and computing the product of 1,…,n.
+Solution : 
+
+6. Write a program that prints a multiplication table for numbers up to 12.
+Solution : 
+
+7. Write a program that prints all prime numbers between 2 numbers. 
+Solution : 
+
+8. Write a program that prints the next 20 leap years.
+Solution : 
+
+9. Write a function that returns the largest element in a array.
+Solution : 
+
+10. Write a function that checks whether an element occurs in a array.
+Solution : 
+
+11. Write a function that returns the elements on odd positions in a list.
+Solution : 
+
+12. Write three functions that compute the sum of the numbers in a array: using a for-loop, a while-loop and recursion.
+Solution : 
+
+13. Write a function that concatenates two arrays. [a,b,c], [1,2,3] → [a,b,c,1,2,3]
+Solution : 
+
+14. Write a function that merges two sorted into a new sorted list. [1,4,6],[2,3,5] → [1,2,3,4,5,6]. You can do this quicker than concatenating them followed by a sort.
+Solution : 
+
+15. Write a function that computes the list of the first n Fibonacci numbers. The first two Fibonacci numbers are 1 and 1. The first few are therefore 1, 1, 1+1=2, 1+2=3, 2+3=5, 3+5=8.
+Solution : 
+
+16. Write a function that return the Factorial of given number n.
+Solution : 
+
+17. Print the following pattern without using print in-built function.
+i.      ii.     iii.
+***     123     321
+***     123     321
+***     123     321
+Solution : 
+
+18. Convert i. Minutes -> Seconds 
+            ii. Fahrenheit -> Celsius -> Kelvin
+Solution : 
+
+19. Design a quiz game which take answer as input to given question (atleast 5) and print final result(Total marks & percentage). +2 for Correct answer, -0.5 for Incorrect.
+Solution : 
+
+20. Design a tool which find area & perimeter of different shapes.
+Solution : 
+
+21. Return first, middle & last element of array.
+Solution : 
