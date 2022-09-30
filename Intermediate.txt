@@ -781,7 +781,6 @@ Example For N=6:
 *          *
 Solution:
 ======================================
-#Cpp
 #include<iostream>
 #include<stdlib.h>
 #include <bits/stdc++.h>
@@ -826,8 +825,9 @@ for(i=N;i>=1;i--)
     return 0;
 }
 
-The number diamond pattern is a diamond pattern made up of numbers.
-
+27. The number diamond pattern is a diamond pattern made up of numbers.
+Solution :
+//Cpp
 #include <iostream>
 using namespace std;
 
@@ -864,6 +864,3 @@ int main() {
   }
   return 0;
 }
-
-
-
