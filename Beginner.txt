@@ -836,3 +836,16 @@ import numpy as np
 poly = [float(x) for x in input().split()]
 x = float(input())
 print(np.polyval(poly, x))
+
+
+30.Getting started with python IDLE
+
+import numpy as np
+if user_input=="Python":
+   print("welcome to IDLE")
+else:
+   print("Welcome to Python")
+print("this statement is an unsaved change!")
+
+
+
