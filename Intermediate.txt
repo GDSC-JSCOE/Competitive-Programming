@@ -47,6 +47,21 @@ Solution :
 
 8. Write a function that takes a number and returns a array of its digits. So for 2342 it should return [2,3,4,2].
 Solution : 
+#Java
+  static void getDigit(int number){
+        ArrayList<Integer> arr=new ArrayList<Integer>();
+        // Printing the last digit of the number
+        while (number > 0) {
+            // Finding the remainder (Last Digit)
+            int remainder = number % 10;
+            // Printing the remainder/current last digit
+            arr.add(remainder);
+            // Removing the last digit/current last digit
+            number = number / 10;
+    }
+    Collections.reverse(arr);
+    System.out.println(arr);
+}
 
 
 9. Write functions that add, subtract, and multiply digits of two numbers.
