@@ -104,7 +104,12 @@ Solution :
 
 16. Write a function that return the Factorial of given number n.
 Solution : 
-
+# Python 
+def factorial(n):
+    if n==0:
+        return 1
+    else:
+        return n*factorial(n-1)
 17. Print the following pattern without using print in-built function.
 i.      ii.     iii.
 ***     123     321
