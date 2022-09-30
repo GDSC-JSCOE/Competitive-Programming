@@ -723,3 +723,19 @@ for i in range(len(sum_left)):
         print(f"Matching index is {i}.")
         break
 	}
+	
+27.Swapping Two Numbers Using Third Variable
+
+#include <stdio.h> 
+int main()
+{
+int var1, var2, temp; 
+printf("Enter two integersn");
+scanf("%d%d", &var1, &var2);
+printf("Before SwappingnFirst variable = %dnSecond variable = %dn", var1, var2);
+temp = var1;
+var1 = var2;
+var2 = temp;
+printf("After SwappingnFirst variable = %dnSecond variable = %dn", var1, var2);
+return 0;
+}
