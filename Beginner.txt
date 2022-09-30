@@ -11,10 +11,10 @@ Solution :
  #include <iostream>
  using namespace std;
  int main(){
-    string name1;
+    string name;
          cout<<" Enter Name  : ";
-         cin>>name1;
-         cout<<"Hi! "+name1;
+         cin>>name;
+         cout<<"Hi "+name;
  return 0;
 }
 2. Modify the previous program (i.e. Q.1) such that only the users Alice and Bob are greeted with their names.
@@ -165,6 +165,13 @@ Code End
 
 9. Write a function that returns the largest element in a array.
 Solution : 
+class Main{
+public static void main(String[] args){
+int[] arr={1,2,3,4,5};
+Arrays.sort(arr);
+System.out.println(arr[arr.length-1]);
+}
+}
 
 10. Write a function that checks whether an element occurs in a array.
 Solution : 
