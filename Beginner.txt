@@ -85,6 +85,58 @@ Solution :
 
 8. Write a program that prints the next 20 leap years.
 Solution : 
+Code:
+#include<stdio.h>
+
+int nr_leap_years(int y)
+
+{
+
+return( y/4 - y/100 + y/400 );
+
+}
+
+int is_leap_year(int y)
+
+{
+
+return(nr_leap_years(y) - nr_leap_years(y-1));
+
+}
+
+int main(void)
+
+{
+
+int nr,i;
+
+nr = 0;
+
+i = 2021;
+
+while(nr<20)
+
+{
+
+if (is_leap_year(i))
+
+{
+
+printf(“\n %d”, i);
+
+nr++;
+
+}
+
+i++;
+
+}
+
+return(0);
+
+}
+
+Code End
 
 9. Write a function that returns the largest element in a array.
 Solution : 
