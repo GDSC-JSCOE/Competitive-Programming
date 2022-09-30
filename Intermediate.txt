@@ -557,3 +557,12 @@ class Solution
         
     }
 }
+
+22. Print all permutation of String both iterative and Recursive way?
+Solution : 
+
+23. Given two arrays, 1,2,3,4,5 and 2,3,1,0,5 find which number is not present in the second array.
+Solution :
+
+24. In an array 1-100 multiple numbers are duplicates, find them?
+Solution :
