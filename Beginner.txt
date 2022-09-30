@@ -19,7 +19,7 @@ Solution :
 }
 2. Modify the previous program (i.e. Q.1) such that only the users Alice and Bob are greeted with their names.
 Solution : 
- #include<bits/stdc++.h>
+ #include<iostream>
  using namespace std;
  int main(){
     string name;
@@ -240,6 +240,26 @@ Solution :
 
 15. Write a function that computes the list of the first n Fibonacci numbers. The first two Fibonacci numbers are 1 and 1. The first few are therefore 1, 1, 1+1=2, 1+2=3, 2+3=5, 3+5=8.
 Solution : 
+class Main {
+  public static int fibonacci_numbers(int n)
+  {
+    if(n == 0){
+      return 0;
+    }
+    else if(n == 1){
+      return 1;
+    }
+    else{
+      return fibonacci_numbers(n-2) + fibonacci_numbers(n-1);
+    }
+  }
+  public static void main (String[] args) {
+    int n = 7;
+    for(int i = 0; i < n; i++){
+      System.out.print(fibonacci_numbers(i)+ " ");
+    }
+  }
+}
 
 16. Write a function that return the Factorial of given number n.
 Solution : 
