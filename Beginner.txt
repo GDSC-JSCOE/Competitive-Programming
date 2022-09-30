@@ -226,7 +226,20 @@ Solution :
 Solution : 
 
 16. Write a function that return the Factorial of given number n.
-Solution : 
+Solution :
+#include<stdio.h>  
+int main()    
+{    
+ int i,fact=1,number;    
+ printf("Enter a number: ");    
+  scanf("%d",&number);    
+    for(i=1;i<=number;i++){    
+      fact=fact*i;    
+  }    
+  printf("Factorial of %d is: %d",number,fact);    
+return 0;  
+}   
+
 
 17. Print the following pattern without using print in-built function.
 i.      ii.     iii.
