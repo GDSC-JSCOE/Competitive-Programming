@@ -160,6 +160,7 @@ class Solution
            ans[i+j]=arr[j];
            j++;
        }
+      
        for(int k=0;k<n;k++){
            arr[k]=ans[k];
        }
