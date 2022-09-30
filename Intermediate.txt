@@ -133,6 +133,24 @@ def isPalindrome(n):  #user-defined function
 	else:
 		return 0
 
+# CPP
+class Solution{
+public:	
+    int isPalindrome(int n) {
+        int rev = 0;
+        int temp = n;
+        while(temp != 0) {
+            int rem = temp % 10;
+            rev = rev * 10 + rem;
+            temp = temp / 10;
+        }
+        if(rev == n){
+            return 1;
+        }
+        return 0;
+    }
+};
+
 
 5. Write a function on_all that applies a function to every element of a list. Use it to print the first twenty perfect squares. The perfect squares can be found by multiplying each natural number with itself. The first few perfect squares are 1*1= 1, 2*2=4, 3*3=9, 4*4=16. Twelve for example is not a perfect square because there is no natural number m so that m*m=12.
 Solution : 
