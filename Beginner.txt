@@ -836,3 +836,36 @@ import numpy as np
 poly = [float(x) for x in input().split()]
 x = float(input())
 print(np.polyval(poly, x))
+
+29.You are given a DNA sequence: a string consisting of characters A, C, G, and T. Your task is to find the longest repetition in the sequence. This is a maximum-length substring containing only one type of character.
+
+solution:
+//cpp
+#include <bits/stdc++.h>
+using namespace std;
+#define pb push_back
+#define ll long long
+#define M 1000000007
+ 
+int main(){
+    ios_base::sync_with_stdio(false);
+    
+    	string s;
+    	cin>>s;
+    	int maxsum = 1, curr = 1;
+    	
+    	
+    	for (int i = 1; i < s.size(); ++i)
+    	{
+    		if (s[i] == s[i-1])
+    		{
+    			curr++;
+    			maxsum = max(maxsum, curr);
+    		}
+    		else{
+    			curr = 1;
+    		}
+    	}
+    	cout<<maxsum;
+    	return 0;
+    }
