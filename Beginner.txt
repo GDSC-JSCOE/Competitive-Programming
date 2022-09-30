@@ -25,11 +25,11 @@ Solution :
     string name;
          cout<<" Enter  Name : ";
          cin>>name;
-         if(name=="Alice" || name=="Bob")
+         if(name=="Alice" || name=="ob")
          {
-          cout<<"Hi "+name>>Alice;
+          cout<<"Hi "+name;
          }else{
-          cout<<"Hi"+name>>Bob;
+          cout<<"Hi";
          }
         return 0;
 }
@@ -86,7 +86,6 @@ int main()
     return 0;
 }
 
-
 5. Write a program that asks the user for a number n and gives them the possibility to choose between computing the sum and computing the product of 1,…,n.
 Solution : 
 
@@ -108,48 +107,7 @@ int main()
 
 7. Write a program that prints all prime numbers between 2 numbers. 
 Solution : 
- #include <bits/stdc++.h>
-using namespace std;
- 
-int main()
-{
-     
-    int a, b, i, j, flag;
-    cout << "Enter lower bound of the interval: ";
-    cin >> a; // Take input
 
-    cout << "\nEnter upper bound of the interval: ";
-    cin >> b; // Take input
- 
-    
-    cout << "\nPrime numbers between "
-         << a << " and " << b << " are: ";
- 
-     
-    for (i = a; i <= b; i++) {
-        // Skip 0 and 1 as they are
-        // neither prime nor composite
-        if (i == 1 || i == 0)
-            continue;
- 
-         
-        flag = 1;
- 
-        for (j = 2; j <= i / 2; ++j) {
-            if (i % j == 0) {
-                flag = 0;
-                break;
-            }
-        }
- 
-        
-        if (flag == 1)
-            cout << i << " ";
-    }
- 
-    return 0;
-}
- 
 8. Write a program that prints the next 20 leap years.
 Solution : 
 Code:
@@ -254,24 +212,27 @@ return 0;
 }
 return arr[i]+usingrec(arr,i+1);
 }
-
-}
-1. Write a program that asks the user for their name and greets (Hi!, Hey!, Hello!, etc) them with their name. 
-Example : (Hi!, pratiksha)
-Solution : 
- #include <iostream>
- using namespace std;
- int main(){
-    string name;
-         cout<<" Enter Name  : ";
-         cin>>name;
-         cout<<"Hi "+name;
- return 0;
 }
 
 
 13. Write a function that concatenates two arrays. [a,b,c], [1,2,3] → [a,b,c,1,2,3]
 Solution : 
+public class Concat {
+
+    public static void main(String[] args) {
+        int[] array1 = {1, 2, 3};
+        int[] array2 = {4, 5, 6};
+
+        int aLen = array1.length;
+        int bLen = array2.length;
+        int[] result = new int[aLen + bLen];
+
+        System.arraycopy(array1, 0, result, 0, aLen);
+        System.arraycopy(array2, 0, result, aLen, bLen);
+
+        System.out.println(Arrays.toString(result));
+    }
+}
 
 
 14. Write a function that merges two sorted into a new sorted list. [1,4,6],[2,3,5] → [1,2,3,4,5,6]. You can do this quicker than concatenating them followed by a sort.
@@ -281,20 +242,7 @@ Solution :
 Solution : 
 
 16. Write a function that return the Factorial of given number n.
-Solution :
-#include<stdio.h>  
-int main()    
-{    
- int i,fact=1,number;    
- printf("Enter a number: ");    
-  scanf("%d",&number);    
-    for(i=1;i<=number;i++){    
-      fact=fact*i;    
-  }    
-  printf("Factorial of %d is: %d",number,fact);    
-return 0;  
-}   
-
+Solution : 
 
 17. Print the following pattern without using print in-built function.
 i.      ii.     iii.
