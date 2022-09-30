@@ -123,18 +123,15 @@ Solution :
 # Python program to check if number is Palindrome
 
 def isPalindrome(n):  #user-defined function
-    # calculate reverse of number
-    temp=n
-    reverse = 0
-    reminder = 0
-    while(n != 0):
-        remainder = n % 10
-        reverse = reverse * 10 + remainder
-        n = int(n / 10)
-    if(temp== reverse):
-        return 1
-    else:
-        return 0
+	n=str(n)
+	l=[]
+	for i in n:
+		l.append(i)
+	rev_l=l[::-1]
+	if l==rev_l:
+		return 1
+	else:
+		return 0
 
 
 5. Write a function on_all that applies a function to every element of a list. Use it to print the first twenty perfect squares. The perfect squares can be found by multiplying each natural number with itself. The first few perfect squares are 1*1= 1, 2*2=4, 3*3=9, 4*4=16. Twelve for example is not a perfect square because there is no natural number m so that m*m=12.
