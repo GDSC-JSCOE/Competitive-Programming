@@ -17,6 +17,11 @@ Solution :
          cout<<"Hi "+name;
  return 0;
 }
+
+#Python
+name = input("Enter Name  : ")
+print("Hi " + name)
+
 2. Modify the previous program (i.e. Q.1) such that only the users Alice and Bob are greeted with their names.
 Solution : 
  #include<iostream>
