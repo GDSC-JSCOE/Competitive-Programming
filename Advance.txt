@@ -165,6 +165,22 @@ void sort012(int a[])
 	}
 }
 
+#Python
+def sort_arr(a):
+	n=len(a)
+   	zero=0
+	two=n-1
+	sorted_list=[1 for x in range(n)]
+	for i in range(n):
+		if a[i]==0:
+			sorted_list[zero]=0
+			zero+=1
+		elif a[i]==2:
+			sorted_list[two]=2
+			two-=1
+		else:
+			pass
+	return sorted_list
 
 
 7. The n-queens puzzle is the problem of placing n queens on an n x n chessboard such that no two queens attack each other.
