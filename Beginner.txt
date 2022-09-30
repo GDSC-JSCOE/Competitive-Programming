@@ -801,3 +801,15 @@ int findEquilibrium(int A[], int n)
   return -1;
   
 }
+
+
+29. Write a program to check if a String is a palindrome or not.
+
+Solution:
+string=input(("Enter a word:"))  
+if(string==string[::-1]):  
+      print("The word is a palindrome")  
+else:  
+      print("The word is not a palindrome") 
+      
+
