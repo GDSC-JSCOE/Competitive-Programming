@@ -32,6 +32,18 @@ static void reverseArray(int[] intArray,int size){
 3. Write a function that tests whether a string is a palindrome.
 Solution : 
 
+def isPalindrome(s):
+    return s == s[::-1]
+
+s = "malayalam"
+ans = isPalindrome(s)
+
+if ans:
+    print("Yes")
+else:
+    print("No")
+    
+
 4. Write a function that tests whether a number is a palindrome.
 Solution : 
 
