@@ -113,6 +113,28 @@ vector<int> mergeArr(int arr1[],int arr2[],m,n){
 
 7. Write a function that rotates a array by k elements. For example [1,2,3,4,5,6] rotated by two becomes [3,4,5,6,1,2]. Try solving this without creating a copy of the array. How many swap or move operations do you need?
 Solution : 
+//java
+class Solution
+{
+    //Function to rotate an array by d elements in counter-clockwise direction. 
+    static void rotateArr(int arr[], int d, int n)
+    {
+        int []ans=new int[n];
+       int i=0;
+       while(i<n-d){
+           ans[i]=arr[i+d];
+           i++;
+       }
+       int j=0;
+       while(j<d){
+           ans[i+j]=arr[j];
+           j++;
+       }
+       for(int k=0;k<n;k++){
+           arr[k]=ans[k];
+       }
+    }
+}
 
  
 class Main
