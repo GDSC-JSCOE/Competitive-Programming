@@ -614,6 +614,20 @@ break;
 return ans;
 }
 
+#Python
+def remain(arr,arr1):
+    for i in arr:
+        cnt=0
+        for j in range(0,len(arr1)):
+            if i==arr1[j]:
+                cnt+=1
+        if cnt==0:
+            print(i)
+            
+arr=[1,2,3,4,5]
+arr1=[2,3,1,0,5]
+remain(arr,arr1)
+
 24. In an array 1-100 multiple numbers are duplicates, find them?
 Solution :
 //function:-
