@@ -782,3 +782,33 @@ int findEquilibrium(int A[], int n)
   return -1;
   
 }
+
+
+29. programme to reverse an array in c++
+
+
+include <bits/stdc++.h>
+
+using namespace std;
+ 
+/* Function to reverse arr[] from start to end*/
+
+void rvereseArray(int arr[], int start, int end)
+{
+
+    while (start < end)
+
+    {
+
+        int temp = arr[start]; 
+
+        arr[start] = arr[end];
+
+        arr[end] = temp;
+
+        start++;
+
+        end--;
+
+    } 
+}
