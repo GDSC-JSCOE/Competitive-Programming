@@ -222,6 +222,20 @@ class Main
 
 8. Write a function that takes a number and returns a array of its digits. So for 2342 it should return [2,3,4,2].
 Solution : 
+#CPP
+	//Function
+	vector<int> digit_to_vector(int n)
+	{
+	   //STL to convert Integer to String
+	   string s=to_string(n);
+	   vector<int> ans;
+	   //Interating string
+	   for(int i=0;i<s.size();i++)
+	      ans.push_back(s[i]-'0'); 
+
+	   return ans;
+	}
+
 #Java
   static void getDigit(int number){
         ArrayList<Integer> arr=new ArrayList<Integer>();
