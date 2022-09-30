@@ -10,7 +10,25 @@ Solution :
 
 2. Write function that reverses a array, preferably in place.
 Solution : 
- 
+#Java
+static void reverseArray(int[] intArray,int size){
+        int i, temp; 
+        for (i = 0; i < size/ 2; i++) { 
+            
+            //store first index value at temp
+            temp = intArray[i]; 
+            
+            //store lastIndex-i-1 value in i'th Index
+            intArray[i] = intArray[size - i - 1]; 
+            
+            //store temp value at lastIndex-i-1 
+            intArray[size - i - 1] = temp; 
+
+            //Loop will run till the mid position of given array
+        } 
+        //printing the reversed Array
+        System.out.println(Arrays.toString(intArray)); 
+}
 3. Write a function that tests whether a string is a palindrome.
 Solution : 
 
@@ -23,11 +41,13 @@ Solution :
 6. Write a function that combines two arrays by alternatingly taking elements, e.g. [a,b,c], [1,2,3] → [a,1,b,2,c,3].
 Solution : 
 
+
 7. Write a function that rotates a array by k elements. For example [1,2,3,4,5,6] rotated by two becomes [3,4,5,6,1,2]. Try solving this without creating a copy of the array. How many swap or move operations do you need?
 Solution : 
 
 8. Write a function that takes a number and returns a array of its digits. So for 2342 it should return [2,3,4,2].
 Solution : 
+
 
 9. Write functions that add, subtract, and multiply digits of two numbers.
 Solution : 
