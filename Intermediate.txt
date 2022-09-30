@@ -74,3 +74,10 @@ Solution :
 17. Given Unsorted array check whether elements are in Arithmetic Progression (Differnce between every 2 consecutive is same) if not return -1.
 Example : 1,2,3,4,5 are in A.P
 Solution : 
+
+18. Given a sorted array of distinct integers and a target value, return the index if the target is found. If not, return the index where it would be if it were inserted in order. You must write an algorithm with O(log n) runtime complexity.
+Solution : 
+
+19. Given a string S,of length N that is indexed from 0 to N-1, print its even-indexed and odd-indexed characters as 2 space-separated strings on a single line.
+    I/P -> Gaurav   O/P -> Gua arv
+Solution : 
