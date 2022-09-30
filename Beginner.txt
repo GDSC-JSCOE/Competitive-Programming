@@ -72,7 +72,13 @@ Solution :
 Solution : 
 
 10. Write a function that checks whether an element occurs in a array.
-Solution : 
+Solution : function Checking(x)
+a=([1,3,5,8,9]);
+if x==a
+    disp('It is an element')
+else 
+    disp('Not an element')
+end
 
 11. Write a function that returns the elements on odd positions in a list.
 Solution : # Python code to return the elements on odd positions in a list.
