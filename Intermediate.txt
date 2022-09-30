@@ -46,6 +46,29 @@ Systme.out.print("Not palindromic");
 }
 }
 
+#CPP
+class Solution{
+public:	
+	int isPalindrome(string S)
+	{
+	       int ch=0;
+         string st;
+         while(S[ch]!='\0'){
+            st+=S[ch];
+            ch++;
+          }
+          string newst;
+          for(int i=ch-1;i>=0;i--){
+          newst+=S[i];
+          }
+          if(newst==st){
+            return 1;
+          }
+          return 0;
+	}
+
+};
+
 4. Write a function that tests whether a number is a palindrome.
 Solution : 
 
@@ -118,6 +141,29 @@ Solution :
 
 10. Implement binary search.
 Solution : 
+#Java
+ class binarySearch {
+  public int search(int[] nums, int target) {
+    int key, start = 0, end = nums.length - 1;
+    while (start <= end) {
+      key = (start+end)/2  
+      if (nums[key] == target){
+        return key;
+      } 
+      if (target < nums[key]){
+        end = key - 1;
+     }
+      else {
+        left = key + 1;
+        }
+    }
+    return -1;
+  }
+ public static void main(String args[]){  
+        int arr[] = {10,20,30,40,50};  
+        binarySearch(arr,30);     
+ }   
+}
 
 def binary_search(list1, n):  
     low = 0  

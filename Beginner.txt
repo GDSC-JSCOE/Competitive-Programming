@@ -39,13 +39,13 @@ Solution :
 using namespace std;
 int main()
 {
-    int n, ans;
-    ans = 0;
+    int n, a;
+    a = 0;
     cin >> n;
     n++;
     while (n--)
     {
-        ans = ans + n;
+        a = a + n;
     }
     cout << a;
     return 0;
@@ -71,18 +71,18 @@ Solution :
 using namespace std;
 int main()
 {
-    int n, a;
-    a = 0;
+    int n, ans;
+    ans = 0;
     cin >> n;
     n++;
     while (n--)
     {
         if (n % 3 == 0 || n % 5 == 0)
         {
-            a = a + n;
+            ans = ans + n;
         }
     }
-    cout << a;
+    cout << ans;
     return 0;
 }
 
@@ -340,12 +340,74 @@ int main()
 Solution : 
 
 20. Design a tool which find area & perimeter of different shapes.
-Solution : 
+Solution : 	# define a function for calculating
+	   	# the area of a shapes
+		def calculate_area(name):\
+   
+  			# converting all characters
+  			# into lower cases
+  			name = name.lower()
+   
+  			# check for the conditions
+  			if name == "rectangle":
+    				l = int(input("Enter rectangle's length: "))
+    				b = int(input("Enter rectangle's breadth: "))
+     
+    				# calculate area of rectangle
+    				rect_area = l * b
+    				print(f"The area of rectangle is {rect_area}.")
+          		
+
+  			elif name == "square":
+    				s = int(input("Enter square's side length: "))
+       
+    				# calculate area of square
+    				sqt_area = s * s
+    				print(f"The area of square is {sqt_area}.")
+          
+ 
+  			elif name == "triangle":
+   				h = int(input("Enter triangle's height length: "))
+    				b = int(input("Enter triangle's breadth length: "))
+       
+    				# calculate area of triangle
+    				tri_area = 0.5 * b * h
+    				print(f"The area of triangle is {tri_area}.")
+          
+ 
+  			elif name == "circle":
+    				r = int(input("Enter circle's radius length: "))
+    				pi = 3.14
+         
+    				# calculate area of circle
+    				circ_area = pi * r * r
+    				print(f"The area of circle is {circ_area}.")
+          
+         
+  			elif name == 'parallelogram':
+    				b = int(input("Enter parallelogram's base length: "))
+    				h = int(input("Enter parallelogram's height length: "))
+     
+    				# calculate area of parallelogram
+    				para_area = b * h
+    				print(f"The area of parallelogram is
+          			{para_area}.")
+     
+  			else:
+   				print("Sorry! This shape is not available")
+ 
+		# driver code
+		if __name__ == "__main__" :
+   
+  		print("Calculate Shape Area")
+  		shape_name = input("Enter the name of shape whose area you want to find: ")
+   
+  		# function calling
+  		calculate_area(shape_name)
 
 21. Return first, middle & last element of array.
 Solution : 
 #python
-
 a = []
 n=int(input("enter total number of elements to be added in array:"))
 for i in range(0,n):
@@ -353,5 +415,19 @@ for i in range(0,n):
     x=input("Enter element to add in array:")
     a.append(x)
 print("Array: ", a)
+mid=(0+arr.length-1)/2;
 print("first element is" ,a[0])
 print("last element is", a[-1])
+print("middle element is",a[mid])
+=======
+#Java
+static int[] printArray(int[] arr){
+    int mid=(0+arr.length-1)/2;
+    int[] nums=new int[3];
+    //Storing values in new array
+    nums[0]=arr[0];
+    nums[1]=arr[mid];
+    nums[2]=arr[arr.length-1];
+    System.out.println("First,middle,last element of array is");
+    return nums;
+}
