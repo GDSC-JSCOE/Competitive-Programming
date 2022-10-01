@@ -430,12 +430,135 @@ i.      ii.     iii.    iv.
 *       ***       *     ***
 **      **       **      **
 ***     *       ***       *
-v.      ii.     iii.    iv.
+v.      vi.     vii.    viii.
 1       123       1     123
 23      45       23      45
 456     5       456       6
 
 Solution : 
+// i)
+void printPat(int n)
+{
+    for(int i=0;i<n/2;i++){
+        for(int j=0;j<n/2;j++){
+            if(j<=i){
+                cout<<"*"<<" ";
+            }else{
+                cout<<"  ";
+            }
+        }
+        cout<<"\n";
+    }
+}
+
+// ii)
+void printPat(int n)
+{
+    for(int i=0;i<n/2;i++){
+        for(int j=0;j<n/2;j++){
+            if(j<=(n/2-i-1)){
+                cout<<"*"<<" ";
+            }else{
+                cout<<"  ";
+            }
+        }
+        cout<<"\n";
+    }
+}
+
+// iii)
+void printPat(int n)
+{
+    for(int i=0;i<n/2;i++){
+        for(int j=0;j<n/2;j++){
+            if(j>=(n/2-i-1)){
+                cout<<"*"<<" ";
+            }else{
+                cout<<"  ";
+            }
+        }
+        cout<<"\n";
+    }
+}
+
+// iv)
+void printPat(int n)
+{
+    for(int i=0;i<n/2;i++){
+        for(int j=0;j<n/2;j++){
+            if(j>=i){
+                cout<<"*"<<" ";
+            }else{
+                cout<<"  ";
+            }
+        }
+        cout<<"\n";
+    }
+}
+
+//v)
+void printPat(int n)
+{
+    int count=1;
+    for(int i=0;i<n/2;i++){
+        for(int j=0;j<n/2;j++){
+            if(j<=i){
+                cout<<count++<<" ";
+            }else{
+                cout<<"  ";
+            }
+        }
+        cout<<"\n";
+    }
+}
+
+// vi)
+void printPat(int n)
+{
+    int count=1;
+    for(int i=0;i<n/2;i++){
+        for(int j=0;j<n/2;j++){
+            if(j<=(n/2-i-1)){
+                cout<<count++<<" ";
+            }else{
+                cout<<"  ";
+            }
+        }
+        cout<<"\n";
+    }
+}
+
+// vii)
+void printPat(int n)
+{
+    int count=1;
+    for(int i=0;i<n/2;i++){
+        for(int j=0;j<n/2;j++){
+            if(j>=(n/2-i-1)){
+                cout<<count++<<" ";
+            }else{
+                cout<<"  ";
+            }
+        }
+        cout<<"\n";
+    }
+}
+
+// viii)
+void printPat(int n)
+{
+    int count=1;
+    for(int i=0;i<n/2;i++){
+        for(int j=0;j<n/2;j++){
+            if(j>=i){
+                cout<<count++<<" ";
+            }else{
+                cout<<"  ";
+            }
+        }
+        cout<<"\n";
+    }
+}
 
 13. Convert Age -> Days (Consider leap years in between) take year of birth as input also.
 Solution : 
@@ -987,4 +1110,69 @@ int main() {
     cout << "\n";
   }
   return 0;
+}
+
+
+28. You have two coin piles containing a and b coins. On each move, you can either remove one coin from the left pile and two coins from the right pile, or two coins from the left pile and one coin from the right pile.
+Your task is to efficiently find out if you can empty both the piles.
+
+solution:
+//cpp
+
+#include <iostream>
+#include <bits/stdc++.h>
+using namespace std;
+#define ll long long
+ 
+void solve() {
+    
+ios_base::sync_with_stdio(0);cin.tie(0);cout.tie(0);
+    
+    ll a,b;
+    cin>>a>>b;
+ 
+    if((a+b)%3==0 && 2*b>=a && 2*a>=b)
+    {
+        cout<<"YES"<<"\n";
+    }
+    else{
+        cout<<"NO"<<"\n";
+    }
+}
+ 
+int main(){
+    
+    int t;
+    cin>>t;
+    while (t--){
+    
+        solve();
+        
+    }
+    return 0;
+}
+
+29. Your task is to calculate the number of bit strings of length n.
+    For example, if n=3, the correct answer is 8, because the possible bit strings are 000, 001, 010, 011, 100, 101, 110, and 111.
+    Print the result modulo 109+7.
+    
+solution:
+//cpp
+#include <iostream>
+#include <bits/stdc++.h>
+using namespace std;
+#define mod 1000000007
+ 
+int main(){
+    
+ios_base::sync_with_stdio(0);cin.tie(0);cout.tie(0);
+    
+    long long n, s=1;
+    cin>>n;
+    for (int i = 0; i < n; i++)
+    {
+        s=(s*2)%mod;
+    }
+    cout<<s;
+    return 0;
 }
