@@ -736,6 +736,62 @@ static int[] printArray(int[] arr){
     return nums;
 }
 
+------------------------------------------------------------------
+#C-Sharp(C#)
+
+    class Duplicate
+    {
+        int n,c=0;
+        int[] arr;
+        int[] b;
+        public void input()
+        {
+            Console.WriteLine("Enter the size of array");
+            n = Convert.ToInt32(Console.ReadLine());
+            arr = new int[n];
+            b = new int[n];
+            Console.WriteLine("Enter the elements");
+            for (int i = 0; i < n; i++)
+            {
+                arr[i] = Convert.ToInt32(Console.ReadLine());
+            }
+        }
+        public void output()
+        {
+            Console.WriteLine("Available array");
+            for (int i = 0; i < n; i++)
+            {
+                Console.Write(arr[i] + " ");
+            }
+            Console.WriteLine();
+            for (int i  = 0; i < n; i++)
+            {
+                int count = 0, j;
+                for (j = i + 1; j < n; j++)
+                {
+                    if (arr[i] == arr[j])
+                    {
+                        count++;
+                        break;
+                    }
+                }
+                if (count == 0)
+                {
+                    b[c] = arr[i];
+                    c++;
+                }
+                
+            }
+            for (int i = 0; i < b.Length; i++)
+            {
+                Console.Write(b[i] + " ");
+
+            }
+            Console.WriteLine();
+        }
+    }
+    
+
 24.Write a program to find the gcd of 2 numbers
 Solution : 
 #C++
