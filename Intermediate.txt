@@ -430,12 +430,135 @@ i.      ii.     iii.    iv.
 *       ***       *     ***
 **      **       **      **
 ***     *       ***       *
-v.      ii.     iii.    iv.
+v.      vi.     vii.    viii.
 1       123       1     123
 23      45       23      45
 456     5       456       6
 
 Solution : 
+// i)
+void printPat(int n)
+{
+    for(int i=0;i<n/2;i++){
+        for(int j=0;j<n/2;j++){
+            if(j<=i){
+                cout<<"*"<<" ";
+            }else{
+                cout<<"  ";
+            }
+        }
+        cout<<"\n";
+    }
+}
+
+// ii)
+void printPat(int n)
+{
+    for(int i=0;i<n/2;i++){
+        for(int j=0;j<n/2;j++){
+            if(j<=(n/2-i-1)){
+                cout<<"*"<<" ";
+            }else{
+                cout<<"  ";
+            }
+        }
+        cout<<"\n";
+    }
+}
+
+// iii)
+void printPat(int n)
+{
+    for(int i=0;i<n/2;i++){
+        for(int j=0;j<n/2;j++){
+            if(j>=(n/2-i-1)){
+                cout<<"*"<<" ";
+            }else{
+                cout<<"  ";
+            }
+        }
+        cout<<"\n";
+    }
+}
+
+// iv)
+void printPat(int n)
+{
+    for(int i=0;i<n/2;i++){
+        for(int j=0;j<n/2;j++){
+            if(j>=i){
+                cout<<"*"<<" ";
+            }else{
+                cout<<"  ";
+            }
+        }
+        cout<<"\n";
+    }
+}
+
+//v)
+void printPat(int n)
+{
+    int count=1;
+    for(int i=0;i<n/2;i++){
+        for(int j=0;j<n/2;j++){
+            if(j<=i){
+                cout<<count++<<" ";
+            }else{
+                cout<<"  ";
+            }
+        }
+        cout<<"\n";
+    }
+}
+
+// vi)
+void printPat(int n)
+{
+    int count=1;
+    for(int i=0;i<n/2;i++){
+        for(int j=0;j<n/2;j++){
+            if(j<=(n/2-i-1)){
+                cout<<count++<<" ";
+            }else{
+                cout<<"  ";
+            }
+        }
+        cout<<"\n";
+    }
+}
+
+// vii)
+void printPat(int n)
+{
+    int count=1;
+    for(int i=0;i<n/2;i++){
+        for(int j=0;j<n/2;j++){
+            if(j>=(n/2-i-1)){
+                cout<<count++<<" ";
+            }else{
+                cout<<"  ";
+            }
+        }
+        cout<<"\n";
+    }
+}
+
+// viii)
+void printPat(int n)
+{
+    int count=1;
+    for(int i=0;i<n/2;i++){
+        for(int j=0;j<n/2;j++){
+            if(j>=i){
+                cout<<count++<<" ";
+            }else{
+                cout<<"  ";
+            }
+        }
+        cout<<"\n";
+    }
+}
 
 13. Convert Age -> Days (Consider leap years in between) take year of birth as input also.
 Solution : 
@@ -988,8 +1111,7 @@ int main() {
   }
   return 0;
 }
-<<<<<<< Updated upstream
-=======
+
 
 28. You have two coin piles containing a and b coins. On each move, you can either remove one coin from the left pile and two coins from the right pile, or two coins from the left pile and one coin from the right pile.
 Your task is to efficiently find out if you can empty both the piles.
@@ -1054,4 +1176,3 @@ ios_base::sync_with_stdio(0);cin.tie(0);cout.tie(0);
     cout<<s;
     return 0;
 }
->>>>>>> Stashed changes
