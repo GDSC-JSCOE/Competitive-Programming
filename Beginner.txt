@@ -235,6 +235,26 @@ i++;
 return(0);
 }
 
+---------------JAVA-----------------------
+import java.util.*;
+class LeapYear {
+	public static void main (String[] args){
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the year to check for leap year.");
+		int year = sc.nextInt();
+
+		System.out.println("The next 20 leap years from the given year " + year+ " are: ");
+		int count =0;
+		while(count != 20){
+		year = year+4;
+		if((year%400==0) || (year%4==0 && year%100 != 0)){
+		System.out.println(year);
+		}
+		count++;
+		}
+	]
+]
+
 9. Write a function that returns the largest element in a array.
 Solution : 
 class Main{
