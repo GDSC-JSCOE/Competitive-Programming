@@ -912,3 +912,25 @@ Solution:
 		return ps;
 	    }
 	}
+
+
+33. Write a program in C to check number is palindrome or not
+Solution: 
+#include<stdio.h>  
+void main()    
+{    
+  int n,r,sum=0,temp;    
+  printf("enter the number=");    
+  scanf("%d",&n);    
+  temp=n;    
+  while(n>0)    
+    {    
+      r=n%10;    
+      sum=(sum*10)+r;    
+      n=n/10;    
+    }    
+  if(temp==sum)    
+      printf("palindrome number ");    
+  else    
+      printf("not palindrome");
+} 
