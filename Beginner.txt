@@ -717,12 +717,7 @@ static int[] printArray(int[] arr){
 }
 
 24.Write a program to find the gcd of 2 numbers
-
-// Optimized Solution:
-
-
-
-======================================
+Solution : 
 #C++
 
 int gcd(int a,int b)
@@ -742,8 +737,6 @@ int main()
 
 
 25.Conversion of Binary number to its decimal
-
-======================================
 #C
 Solution:
 #include<stdio.h>
@@ -773,8 +766,9 @@ K=0;
   }
   return 0;
 }
+
 26.Split the array into equal sum subarrays.
-======================================
+Solution:
 sample = [2, 4, 5, 1, 2, 3]
  
 sum = 0
@@ -796,7 +790,7 @@ for i in range(len(sum_left)):
 	}
 
 27 the minimum numbers of operations required by Chef to make parity of all the elements same.
-=============================================================================================
+Solution: 
 #include <iostream>
 using namespace std;
 #define ll long long 
@@ -828,12 +822,10 @@ int main() {
 	        cout<<n-odd<<endl;
 	    }
 	}
-	return 0;
-	
-	
+	return 0;	
 	
 28. Equilibrium index of an array
-	
+Solution:	
 int findEquilibrium(int A[], int n)
 {
   //Your code here
@@ -856,9 +848,8 @@ int findEquilibrium(int A[], int n)
 
 
 29. Polynomials
-
+Solution: 
 import numpy as np
-
 poly = [float(x) for x in input().split()]
 x = float(input())
 print(np.polyval(poly, x))
@@ -876,7 +867,7 @@ disks = int(input('Enter number of disks: '))
 hanoi(disks, 'A', 'B', 'C')
 
 31. Kadane's Algorithm (largest contiguous array sum)
-
+Solution:
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -901,3 +892,23 @@ int main()
 	cout << "Maximum sum is " << max_sum;
 	return 0;
 }
+
+32. Print all possible subsets of a given array. (power set)
+Solution:	
+	class Solution {
+	    public void powerSet(int[] arr, int i, ArrayList<Integer> ll, List<List<Integer>> ps){
+		if(i>=arr.length){
+		    ps.add(new ArrayList<>(ll));
+		    return;
+		}
+		ll.add(arr[i]);
+		powerSet(arr, i+1, ll, ps);
+		ll.remove(ll.size()-1);
+		powerSet(arr, i+1, ll, ps);
+	    }
+	    public List<List<Integer>> subsets(int[] nums) {
+		List<List<Integer>> ps = new ArrayList<>();
+		powerSet(nums, 0, new ArrayList<>(), ps);
+		return ps;
+	    }
+	}
