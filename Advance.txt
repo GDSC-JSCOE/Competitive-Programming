@@ -225,7 +225,129 @@ int main()
 
 
 3. Implement the following sorting algorithms: Selection sort, Insertion sort, Merge sort, Quick sort, Stooge Sort.
-Solution :
+Solution : 
+//Selection Sort,Insertion Sort, Quick Sort using C++
+#include<iostream>
+using namespace std;
+
+int partition(int a[], int start, int end)   //For Quick Sort
+{
+    int pivot=a[start];
+    int count=0;
+    for(int i=start+1;i<=end;i++)
+    {
+        if (a[i] <= pivot)
+            count++;
+    }
+    int Ipivot = start + count;
+    swap(a[Ipivot], a[start]);
+    int i = start, j = end;
+
+    while ((i<Ipivot) && (j>Ipivot))
+    {
+        while (a[i] <= pivot)
+        {
+            i++;
+        }
+        while (a[j] > pivot)
+        {
+            j--;
+        }
+        if ((i<Ipivot) && (j>Ipivot))
+        {
+            swap(a[i++], a[j--]);
+        }
+    }
+    return Ipivot;
+}
+void quickSort(int a[], int start, int end)   //For Quick Sort
+{
+    if(start>=end)
+        return;
+    //partitioning of array
+    int p=partition(a,start,end);
+    //Sort left part
+    quickSort(a,start,p-1);
+    //Sort right part
+    quickSort(a,p+1,end);
+}
+
+int main()
+{
+    int ch;
+    cout<<"For Selection Sort: 1, Insertion Sort: 2, Quick Sort: 3."<<endl;
+    cout<<"Enter your choice: ";
+    cin>>ch;
+    int n;
+    cout<<"Enter the number of elements in the array: ";
+    cin>>n;
+    int a[n];
+    for(int i=0;i<n;i++)
+    {
+        cout<<"Enter the element "<<i+1<<": ";
+        cin>>a[i];
+    }
+
+    switch(ch)
+    {
+        case 1://Selection Sort
+        {
+            int min;
+            for(int j=0;j<n-1;j++)
+            {
+                min=a[j];
+                for(int k=j+1;k<n;k++)
+                {
+                    if(a[j]>a[k])
+                    {
+                        min=a[j];
+                        a[j]=a[k];
+                        a[k]=min;
+                    }
+                }
+            }
+            for(int l=0;l<n;l++)
+            {
+                cout<<a[l]<<" ";
+            }
+            break;
+        }
+        case 2://Insertion Sort
+        {
+            int min;
+            for(int j=1;j<n;j++)
+            {
+                min=a[j];
+                int k=j-1;
+                while(a[k]>min && k>=0)
+                {
+                    a[k+1]=a[k];
+                    k--;
+                }
+                a[k+1]=min;
+            }
+            for(int l=0;l<n;l++)
+            {
+                cout<<a[l]<<" ";
+            }
+            break;
+        }
+        case 3://Quick Sort
+        {
+            quickSort(a,0,n-1);
+            for(int i=0;i<n;i++)
+            {
+                cout<<a[i]<<" ";
+            }    
+            break;
+        }
+        default:
+        {
+            cout<<"Enter correct choice."<<endl;
+	    break;
+        }
+    }
+}
 
 4. Write function that translates a text to Pig Latin and back. English is translated to Pig Latin by taking the first letter of every word, moving it to the end of the word and adding ‘ay’. “The quick brown fox” becomes “Hetay uickqay rownbay oxfay”.
 Solution :
