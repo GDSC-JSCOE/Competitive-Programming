@@ -901,3 +901,23 @@ int main()
 	cout << "Maximum sum is " << max_sum;
 	return 0;
 }
+
+32. Print all possible subsets of a given array. (power set)
+	
+	class Solution {
+	    public void powerSet(int[] arr, int i, ArrayList<Integer> ll, List<List<Integer>> ps){
+		if(i>=arr.length){
+		    ps.add(new ArrayList<>(ll));
+		    return;
+		}
+		ll.add(arr[i]);
+		powerSet(arr, i+1, ll, ps);
+		ll.remove(ll.size()-1);
+		powerSet(arr, i+1, ll, ps);
+	    }
+	    public List<List<Integer>> subsets(int[] nums) {
+		List<List<Integer>> ps = new ArrayList<>();
+		powerSet(nums, 0, new ArrayList<>(), ps);
+		return ps;
+	    }
+	}
