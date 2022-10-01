@@ -836,3 +836,18 @@ import numpy as np
 poly = [float(x) for x in input().split()]
 x = float(input())
 print(np.polyval(poly, x))
+
+30. Convert Decimal to Binary Using Recursion in Python?
+
+# Function to print binary number using recursion
+def convertToBinary(n):
+   if n > 1:
+       convertToBinary(n//2)
+   print(n % 2,end = '')
+
+# decimal number
+dec = 34
+
+convertToBinary(dec)
+print()
+
