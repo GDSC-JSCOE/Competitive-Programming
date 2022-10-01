@@ -1179,6 +1179,9 @@ ios_base::sync_with_stdio(0);cin.tie(0);cout.tie(0);
 
 30. Write a Java program to find the sum of even numbers in an integer array.
 
+solution:
+//java 
+
 import java.util.Scanner;
 public class Sum_Even_Array {
    public static void main(String args[]) {
