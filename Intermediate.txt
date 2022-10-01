@@ -702,6 +702,19 @@ return 1;
 
 18. Given a sorted array of distinct integers and a target value, return the index if the target is found. If not, return the index where it would be if it were inserted in order. You must write an algorithm with O(log n) runtime complexity.
 Solution : 
+#Python
+def binarySearch(arr, low, high, target):
+    if low <= high:
+        mid = (high + low) // 2
+        if arr[mid] == target:
+            return mid
+        elif arr[mid] > target:
+            return binarySearch(arr, low, mid - 1, target)
+        else:
+            return binarySearch(arr, mid + 1, high, target)
+    else:
+        return low
+
 //java
  int binarysearch(int arr[], int n, int k) {
         int start=0;
