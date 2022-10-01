@@ -1,1 +1,8 @@
-
+1. Create the following pattern using any language of your choice. (Notice the slight change in middle element!)
+        1
+       121
+      12321
+     1235321
+      12321
+       121
+        1
