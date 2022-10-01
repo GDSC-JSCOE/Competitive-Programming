@@ -837,9 +837,7 @@ poly = [float(x) for x in input().split()]
 x = float(input())
 print(np.polyval(poly, x))
 
-
 30. Implement Tower of Hanoi.
-
 Solution:
 def hanoi(disks, source, auxiliary, target):
     if disks == 1:
