@@ -14,7 +14,7 @@ Solution :
     string name;
          cout<<" Enter Name  : ";
          cin>>name;
-         cout<<"Hi "+name;
+         cout<<"Hi "+ name;
  return 0;
 }
 
@@ -31,9 +31,9 @@ Solution :
     string name;
          cout<<" Enter  Name : ";
          cin>>name;
-         if(name=="Alice" || name=="bob")
+         if(name=="Alice" || name=="Bob")
          {
-          cout<<"Hi "+name;
+          cout<<"Hi "+ name;
          }else{
           cout<<"Hi";
          }
@@ -46,15 +46,12 @@ Solution :
 using namespace std;
 int main()
 {
-    int n, a;
-    a = 0;
+    int n, sum = 0;
     cin >> n;
-    n++;
-    while (n--)
-    {
-        a = a + n;
+    for(int i = 1; i < n; i++){
+        sum += i;
     }
-    cout << a;
+    cout<< sum <<endl;
     return 0;
 }
 
@@ -63,10 +60,9 @@ include <iostream>
 using namespace std;
 int main()
 {
-    int n, a;
-    a = 0;
-   cin>>n;
-    cout << (n*(n+1))/2;
+    int n;
+    cin>>n;
+    cout << n*(n+1)/2;
     return 0;
 }
 
@@ -90,15 +86,14 @@ Solution :
 using namespace std;
 int main()
 {
-    int n, ans;
-    ans = 0;
+    int n, ans = 0;
     cin >> n;
     n++;
     while (n--)
     {
         if (n % 3 == 0 || n % 5 == 0)
         {
-            ans = ans + n;
+            ans += n;
         }
     }
     cout << ans;
@@ -108,6 +103,7 @@ int main()
 5. Write a program that asks the user for a number n and gives them the possibility to choose between computing the sum and computing the product of 1,…,n.
 Solution : 
 
+#python 
 x=int(input('Enter a number :'))
 y=input('Compute the sum or Compute the product(s/m) ? :')
 sum=0
@@ -150,6 +146,7 @@ int main() {
 
 6. Write a program that prints a multiplication table for numbers up to 12.
 Solution : 
+//C++ implementation
 #include <iostream>
 using namespace std;
 int main()
@@ -157,18 +154,26 @@ int main()
     int a;
     for(int j=1; j<=12; j++)
     {
-    for (int i = 1; i <= 10; i++)
-    {
-        a = j * i;
-        cout << a << endl;
+        cout<< "multiplication table of "<<i<<endl;
+        for (int i = 1; i <= 10; i++)
+        {
+            a = j * i;
+            cout << a << endl;
+        }cout<<endl;
     }
-}
     return 0;
 }
 
+#python 
+for number1 in range(1, 13): 
+    print ("multiplication table of" , number1)
+        for number2 in range(1,11):
+            print (number1 * number2)    
+
 7. Write a program that prints all prime numbers between 2 numbers. 
 Solution : 
-//cpp
+//C++ Implementation
+
 class Solution {
   public:
   
