@@ -1043,3 +1043,35 @@ void main()
   printf("Varience           = %.2f\n", Variance);
   printf("Standard deviation = %.2f\n", SD);
 }
+
+ 35. How to remove Whitespaces from String
+ #Solution
+ 
+ String removeWhiteSpaces(String input){
+	StringBuilder output = new StringBuilder();
+	
+	char[] charArray = input.toCharArray();
+	
+	for(char c : charArray) {
+		if (!Character.isWhitespace(c))
+			output.append(c);
+	}
+	
+	return output.toString();
+}
+
+
+36. Palindrome Check
+#Solution
+
+boolean checkPalindromeString(String input) {
+	boolean result = true;
+	int length = input.length();
+	for(int i=0; i < length/2; i++) {
+		if(input.charAt(i) != input.charAt(length-i-1)) {
+			result = false;
+			break;
+		}
+	}
+	return result;
+}
