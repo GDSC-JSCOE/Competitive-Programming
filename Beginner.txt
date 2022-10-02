@@ -1043,3 +1043,81 @@ void main()
   printf("Varience           = %.2f\n", Variance);
   printf("Standard deviation = %.2f\n", SD);
 }
+
+
+35. Getting the kth smallest element from the array
+Example : Array = [1, 4, 5, 3, 2]
+	  2nd smallest element : 2
+# Java
+Solution : 
+	import java.lang.*;
+	import java.util.*;
+
+	class Demo
+	{
+		public static void main(String args[])
+		{
+			Scanner scan = new Scanner(System.in);
+			
+			System.out.print("Enter the size of array : ");
+			int n = scan.nextInt();
+			
+			int[] arr = new int[n];
+			
+			System.out.print("Enter the array elements : ");
+			for(int i = 0; i < n ; i++)
+			{
+				int temp = scan.nextInt();
+				arr[i] = temp;
+			}
+			
+			System.out.print("Enter the value of k to get the kth smallest value in  array : ");
+			int k = scan.nextInt();
+			
+			Arrays.sort(arr);
+			
+			System.out.println("The kth smallest element is : " + arr[k-1]);
+		}
+	}
+
+36. Implementation of Insertion sort in C
+Example : Array = {23, 15, 29, 11, 1}
+	  After insertion sort : {1, 11, 15, 23, 29}
+# C language
+Solution : 
+	#include <stdio.h>
+
+	void display(int array[], int size)
+	{
+	    for (int i = 0; i < size; i++)
+	    {
+		printf("%d ", array[i]);
+	    }
+	}
+
+	void insertion_sort(int array[], int size)
+	{
+	    int hole, value, i;
+	    for (i = 0; i < size; i++)
+	    {
+		value = array[i];
+		hole = i;
+		while (hole > 0 && array[hole - 1] > value)
+		{
+		    array[hole] = array[hole - 1];
+		    hole = hole - 1;
+		}
+		array[hole] = value;
+	    }
+	}
+
+	int main()
+	{
+	    int array[5] = {23, 15, 29, 11, 1};
+	    int size = 5;
+
+	    insertion_sort(array, size);
+	    display(array, size);
+
+	    return 0;
+	}
