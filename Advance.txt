@@ -731,3 +731,24 @@ int main()
       cout << nums[i] <<" ";
   return 0;     
 }
+
+11) Write a python program for finding Median of Two Sorted Arrays.
+Solution:
+//Given two sorted arrays nums1 and nums2 of size m and n respectively, return the median of the two sorted arrays.
+//The overall run time complexity should be O(log (m+n)).
+
+import math
+class Solution(object):
+    def findMedianSortedArrays(self, nums1, nums2):
+        """
+        :type nums1: List[int]
+        :type nums2: List[int]
+        :rtype: float
+        """
+        nums3=nums1+nums2
+        nums3.sort()
+        if len(nums3)%2==0:
+            
+            return float((nums3[len(nums3)/2]+nums3[len(nums3)/2-1]))/2
+        else:
+            return nums3[int(math.ceil(len(nums3)/2))]
