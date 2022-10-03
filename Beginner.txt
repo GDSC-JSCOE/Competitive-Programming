@@ -23,6 +23,19 @@ Solution :
 name=input("Enter your name: ")
 print("Hello!,",name)
 
+# rust
+use std::io::{self, Write};
+fn main() {
+    let mut name = String::new();
+
+    print!("Enter you name: ");
+    io::stdout().flush().unwrap();
+    io::stdin()
+        .read_line(&mut name)
+        .expect("Failed to read name");    
+    println!("Hello, {}", name);
+}
+
 2. Modify the previous program (i.e. Q.1) such that only the users Alice and Bob are greeted with their names.
 Solution : 
  #include<iostream>
