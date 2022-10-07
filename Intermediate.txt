@@ -1250,3 +1250,58 @@ public class Sum_Even_Array {
    System.out.println("Sum of even ="+sum);
 }
 }
+
+31. write a Java Program To Rotate A Linked List.
+
+Problem Link : https://leetcode.com/problems/rotate-list/
+
+Java Solution :
+
+class Solution {
+    public ListNode rotateRight(ListNode head, int k) {
+        
+        if (k == 0 || head == null || head.next == null) {
+            return head;
+        }
+        
+        ListNode lencount = head;
+        int Len = 0, y = 0;
+        
+        // To Get Length Of LL;
+        do {
+            ++Len;
+            lencount = lencount.next;
+        } while (lencount != null);
+        
+        
+        // If Length And Rotation Count Are Same, So After K Rotations It Same As Original List;
+        
+        if (k == Len) {
+            return head;
+        }
+       
+        
+        // Rotation Module;
+        int rotate = Len - k % Len;
+        
+    
+        // To Store Values Of LL;       
+        int[] arr = new int[Len];
+        ListNode CurHead = head;
+        
+        while (CurHead != null) {
+            arr[y++] = CurHead.val;
+            CurHead = CurHead.next;
+        }
+        
+        // Resultant List;
+        ListNode runner = head;
+
+        
+        for (int i = 0; i < arr.length; i++) {
+            runner.val = arr[(i + rotate) % Len];
+            runner = runner.next;
+        }
+        return head;
+    }
+}
