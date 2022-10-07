@@ -71,7 +71,7 @@ int main()
     return 0;
 }
 
-//another method 
+
 include <iostream>
 using namespace std;
 int main()
@@ -134,6 +134,7 @@ if y=='s':
     print('Sum :',sum)    
 if y=='m':
     print('Product :',multi)
+    
 
 ======= In C++ ==========
 #include <iostream>
