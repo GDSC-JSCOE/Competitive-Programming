@@ -6,3 +6,14 @@
       12321
        121
         1
+
+
+Q.) Vijay is given a problem to solve. he is given an array of names and asked to find duplicates in the names. Vijay builds a hashtable with all the names and uses that to find duplicates. Which of the following statements are true?
+
+(unless otherwise stated, assume that the hash-function and hash-table are working well and doing a good job.) pick all that apply in most cases,)
+
+1) the program will run in o(n) time in most cases,
+2) the program will run in o(n log n) time in most cases,
+3) the program will run in o(n^2) time
+4) if the hash-function is a doing a bad job, and there are lots of collisions, the program will run in o(n log n) time
+5) if the hash-function is a doing a bad job, and there are lots of collisions, the program will run in o(n^2)times
