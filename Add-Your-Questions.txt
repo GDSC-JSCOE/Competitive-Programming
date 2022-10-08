@@ -11,3 +11,8 @@
    EXAMPLE:
      input - Tact coa
      output - True(permutation:"taco cat","atco cta",etc.)
+
+3.You have given a number. You have to find out next greater number to given number with the same set of digits.
+   EXAMPLE:
+     input: 102
+     Output: 120     
