@@ -6,3 +6,5 @@
       12321
        121
         1
+
+2. Swap any two numbers without using the temporary variable. (No restriction on language)
