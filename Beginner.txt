@@ -96,6 +96,32 @@ else:
        sum += num
        num -= 1
    print("The sum is", sum)
+   
+# Java
+
+import java.util.Scanner;
+
+public class Sum {
+    public static int sum(int n){
+        if(n == 0){
+            return 0;
+        }
+        else if (n == 1){
+            return 1;
+        }
+        else {
+            return sum(n-1)+(n);
+        }
+    }
+
+    public static void main(String [] args){
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter the number : ");
+        int n = scanner.nextInt();
+        System.out.println(sum(n));
+    }
+}
+
 
 4. Modify the previous program (i.e. Q.3) such that only multiples of three or five are considered in the sum, e.g. 3, 5, 6, 9, 10, 12, 15 for n=17
 Solution : 
