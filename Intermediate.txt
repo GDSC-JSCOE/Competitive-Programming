@@ -42,6 +42,67 @@ while (True):
     else:
         prev_no=temp
         i += 1
+	
+#CPP
+//Solution Begins
+#include<bits/stdc++.h>
+#include<stdlib.h>
+using namespace std;
+void guess(int num){
+    cout << "GUESS THE NUMBER!!\n\n";
+    int i=1;
+    int a=1;
+    while (a){
+        int temp;
+        cout<<"\nEnter your guess : ";
+        cin >> temp;
+        if (temp==num){
+            cout << "Correct Guess!\nYou WON!!\n";
+            if (i==1){
+                cout << "You did it in "<< i<< " Guess! Yay!";
+            }
+            else if (i>=2 && i<=4){
+                cout <<"\nYou did it in only "<< i<< " Guesses!";
+            }
+            else if (i>=5 && i<=8)
+                cout<<"\nYou did it in "<<i<<" Guesses!";
+            else
+                cout <<"\nYou required "<<i<<" Guesses :(";
+            a=0;
+        }
+        else if (temp<num){
+            cout << "Your guess is Less!\n";
+            cout << "Try Again. \n";
+        }
+        else{
+            cout << "Your guess is Large!\n";
+            cout << "Try Again. \n";
+        }
+        int prev_no;
+        if (i==1){
+            prev_no=temp;
+            i+=1;
+        }
+        else if (prev_no==temp){
+            continue;
+        }
+        else{
+            prev_no=temp;
+            i += 1;
+        }
+    }
+}
+int main(){
+    cout << "THE GAME BEGINS!!\n";
+    cout << "Enter any Number for your friend to guess :- ";
+    int b;
+    cin >> b;
+    system("clear");
+    cout << "GAME IS ON!!\n\n";
+    guess(b);
+
+}
+
 
 2. Write function that reverses a array, preferably in place.
 Solution : 
