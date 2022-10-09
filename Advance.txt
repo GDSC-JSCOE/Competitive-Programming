@@ -351,6 +351,29 @@ int main()
 
 4. Write function that translates a text to Pig Latin and back. English is translated to Pig Latin by taking the first letter of every word, moving it to the end of the word and adding ‘ay’. “The quick brown fox” becomes “Hetay uickqay rownbay oxfay”.
 Solution :
+def piglatin(sentence)
+    sentence_array = sentence.split(" ") #split converts a sentence containing strings to 
+    transformed_words = sentence_array.map do |word| #don't use .each or only the first item(i.e. word) will be returned
+        first_letter = word.slice!(0) #removing first letter and storing in variable
+        pig_word = word+first_letter+"ay"
+    end
+    transformed_words.join(" ") #.join will combine the strings in the array
+end
+
+puts piglatin("The quick brown fox")
+
+def english(sentence)
+    sentence_array = sentence.split(" ")
+    transformed_words = sentence_array.map do |word| #looping through each word in the array
+        word = word.delete_suffix("ay") #deleting ay from the word
+        first_letter = word.slice!(-1)     #  removing the last letter and assigning it as the first letter
+        english_word = first_letter + word #joining first letter to the rest of the word
+        english_word.capitalize
+    end
+     puts transformed_words.join(" ")
+end
+
+ english("Hetay uickqay rownbay oxfay")
 
 5. Write a program that outputs all possibilities to put + or - or nothing between the numbers 1,2,…,9 (in this order) such that the result is 100. For example 1 + 2 + 3 - 4 + 5 + 6 + 78 + 9 = 100
 Solution :
