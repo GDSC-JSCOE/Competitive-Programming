@@ -1275,3 +1275,109 @@ Solution : class Tree {
         }
     }
 }
+
+
+39. Delete Node in a Linked List : There is a singly-linked list head and we want to delete a node node in it. You are given the node to be deleted node. You will not be given access to the first node of head.
+Solution: (C++) :
+
+void deleteNode(ListNode* node) {
+
+        // To delete one node from linked list we should actually present on previous node of the node we want to delete
+        // But here they had given us the node they want to delete, not the previous node
+
+        swap(node->val, node->next->val); // so we swapped the value stored in that node and the next node
+
+        ListNode* toDelete = node->next;
+
+        node->next = node->next->next; 
+        // node->next = toDelete->next; //We can also write this as well instead of above line
+
+        delete toDelete;
+}
+
+40. Linked List Cycle : Given head, the head of a linked list, determine if the linked list has a cycle in it. Return true if there is a cycle in the linked list. Otherwise, return false.
+Solution : (C++)
+
+    bool hasCycle(ListNode *head) {
+
+        // if head is NULL or there is single node in List then return false;
+        if(head == NULL || head->next == NULL) { 
+            return false;
+        }
+
+        // Placed slow and fast at the start of the list
+        ListNode* slow = head;
+        ListNode* fast = head;
+
+        // till fast and fast-> next not reaches NULL
+        while(fast!=NULL && fast->next!=NULL) {
+
+            // we will increment fast by 2 step and slow by 1 step
+            slow = slow->next;
+            fast = fast->next->next;
+
+            // compulsory
+            // first iterate slow and fast pointer and 
+            // then check for if slow==fast
+            // dont do vice versa
+
+            // At the point if fast and slow are at same address
+ 			// this means linked list has a cycle in it.
+            if(slow == fast) {
+                return true;
+            }
+        }
+
+        // if traversal in loop reaches to NULL this means that true condition never satisfied so no cycle.
+        return false;
+    }
+
+41. Arrange even and odd nodes in a Link List : Given a link list of size N, modify the list such that all the even numbers appear before all the odd numbers in the modified list. The order of appearance of numbers within each segregation should be same as that in the original list.
+NOTE: Don't create a new linked list, instead rearrange the provided one.
+Solution : (C++) :
+
+class Solution{
+public:
+
+    Node* EvenOddList(Node* head) {
+
+        if(head==NULL || head->next==NULL) 
+            return head;
+
+        Node* oddDummy = new Node(5);
+        Node* evenDummy = new Node(6);
+
+        Node* odd = oddDummy;
+        Node* even = evenDummy;
+
+        Node* temp = head;        
+        while(temp) {
+
+            if(temp->data%2!=0) {
+
+                odd->next = temp;
+                odd = odd->next;
+
+            }
+            else if(temp->data%2==0) {
+
+                even->next = temp;
+                even = even->next;
+
+            }
+            temp = temp->next;
+        }
+
+        even->next = oddDummy->next;
+        odd->next = NULL;
+
+        return evenDummy->next;
+    }
+
+    Node* divide(int N, Node *head){
+
+        Node* newHead = EvenOddList(head);
+        return newHead;
+    }
+};
+
