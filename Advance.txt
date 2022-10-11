@@ -445,18 +445,18 @@ Solution :
 void sort012(int a[])
 {
 	int n=arr.size();
- int low = 0;
+	int low = 0;
 	int high = n - 1;
 	int mid = 0;
 
 	// Iterate till all the elements
 	// are sorted
-	while (mid <= hi) {
+	while (mid <= high) {
 		switch (a[mid]) {
 
 		// If the element is 0
 		case 0:
-			swap(a[lo++], a[mid++]);
+			swap(a[low++], a[mid++]);
 			break;
 
 		// If the element is 1 .
@@ -466,7 +466,7 @@ void sort012(int a[])
 
 		// If the element is 2
 		case 2:
-			swap(a[mid], a[hi--]);
+			swap(a[mid], a[high--]);
 			break;
 		}
 	}
