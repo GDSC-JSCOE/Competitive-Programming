@@ -36,6 +36,24 @@ fn main() {
     println!("Hello, {}", name);
 }
 
+# Java
+
+import java.util.Scanner;
+
+public class Greet {
+    static Scanner scanner = new Scanner(System.in);
+    public static void greet(String name){
+        System.out.println("Hello, "+name);
+    }
+
+    public static void main(String[] args) {
+        System.out.print("Enter your name : ");
+        String name = scanner.next();
+        greet(name);
+    }
+}
+
+
 2. Modify the previous program (i.e. Q.1) such that only the users Alice and Bob are greeted with their names.
 Solution : 
  #include<iostream>
@@ -1189,3 +1207,46 @@ Solution :
 
 	    return 0;
 	}
+	
+37.Flatten binary tree to linked list
+# java language
+Solution : class Solution
+{
+    public static void flatten(Node root)
+    {
+        //code here
+        if (root == null || root.left == null &&
+	        root.right == null) {
+    		return;
+    	}
+    	
+    	Node t = root.right;
+
+    	// if root.left exists then we have
+    	// to make it root.right
+    	if (root.left != null) {
+    
+    		// move left recursively
+    		flatten(root.left);
+    
+    		// store the node root.right
+    		Node tmpRight = root.right;
+    		root.right = root.left;
+    		root.left = null;
+    
+    		// find the position to insert
+    		// the stored value
+    		t = root.right;
+    		while (t.right != null) {
+    			t = t.right;
+    		}
+    
+    		// insert the stored value
+    		t.right = tmpRight;
+    	}
+    
+    	// now call the same function
+    	// for root.right
+    	flatten(t);
+    }
+}
