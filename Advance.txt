@@ -1003,4 +1003,110 @@ int main()
 }
 
 
+15. Implement N-ary Binary Search Algorithm and merge sort from scratch using C.
+
+Solution :
+#include <stdio.h>
+
+void merge(int A[], int start, int mid, int end) {
+    // stores the starting position of both parts in temporary variables.
+    int p = start, q = mid + 1;
+
+    int Arr[end - start + 1], k = 0;
+
+    for (int i = start; i <= end; i++) {
+        if (p > mid)  // checks if first part comes to an end or not .
+            Arr[k++] = A[q++];
+
+        else if (q > end)  // checks if second part comes to an end or not
+            Arr[k++] = A[p++];
+
+        else if (A[p] < A[q])  // checks which part has smaller element.
+            Arr[k++] = A[p++];
+
+        else
+            Arr[k++] = A[q++];
+    }
+    for (int p = 0; p < k; p++) {
+        // Now the real array has elements in sorted manner including both parts.
+        A[start++] = Arr[p];
+    }
+}
+
+void merge_sort(int A[], int start, int end) {
+    if (start < end) {
+        int mid = (start + end) / 2;  // defines the current array in 2 parts .
+        merge_sort(A, start, mid);    // sort the 1st part of array .
+        merge_sort(A, mid + 1, end);  // sort the 2nd part of array.
+
+        // merge the both parts by comparing elements of both the parts.
+        merge(A, start, mid, end);
+    }
+}
+
+int N_arySearch(int* nums, int size, int target, int N) {  // N: Constant
+    int low = 0, high = size - 1, mid[N];
+    // O(logN n) = O(log5 n)
+    while (low <= high) {
+        // Find all N middle values - O(1)
+        mid[0] = low + (high - low) / N;
+        // O(N) = O(1); as N is a constant
+        for (int i = 1; i <= N; i++) mid[i] = mid[i - 1] + (high - low) / N;
+        // Return index of mid if one of mid element is equal to target
+        for (int i = 0; i < N; i++)
+            if (nums[mid[i]] == target) return mid[i];
+        // if target is lesser than the first middle element
+        if (target < nums[mid[0]]) high = mid[0] - 1;
+        // if target is higher than the last middle element
+        else if (target > nums[mid[N - 1]])
+            low = mid[N - 1] + 1;
+        // if target is between the middle elements
+        else
+            for (int i = 0; i < N - 1; i++)
+                if (target > nums[mid[i]] && target < nums[mid[i + 1]]) low = mid[i] + 1, high = mid[i + 1] - 1;
+    }
+    return -1;
+}
+
+void printArray(int A[], int size) {
+    for (int i = 0; i < size; i++) printf("%d ", A[i]);
+    printf("\n\n");
+}
+
+int main() {
+    int n;
+    scanf("%d", &n);  // Size of the array
+    int nums[n];
+    for (int i = 0; i < n; i++) scanf("%d", &nums[i]);
+
+    merge_sort(nums, 0, n - 1);
+    printf("\nSorted Array: ");
+    printArray(nums, n);
+
+    int t = 0, target;
+    scanf("%d", &t);
+    while (t--) {
+        scanf("%d", &target);
+        int ans = N_arySearch(nums, n, target, 5);
+        (ans == -1)
+            ? printf("\nnot found: %5d", target)
+            : printf("\nfound: %5d, index: %5d", target, ans);
+    }
+    return 0;
+}
+
+// Input:
+
+// /*
+// 20
+// 100 30 45 32 82 23 97 85 3 21 40 62 83 51 58 72 89 26 53 27
+// 5
+// 3 100 51 201 2
+
+// 15
+// 67 29 10 81 34 60 55 21 39 15 77 80 84 35 25
+// 19
+// 0 5 10 15 21 25 29 34 35 39 55 60 67 77 80 81 84 85 100
+// */
+
 
