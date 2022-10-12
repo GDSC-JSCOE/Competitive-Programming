@@ -71,6 +71,12 @@ Solution :
         return 0;
 }
 
+#solved Q no 2 using python
+# Python  
+name = input("Enter name: ")
+if(name=="Alice" or name=="Bob"):
+    print("Hi!, "+name);
+
 3. Write a program that asks the user for a number n and prints the sum of the numbers 1 to n
 Solution : 
 //include <iostream>
