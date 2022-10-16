@@ -1637,3 +1637,39 @@ int main() {
     root = removeLeafNodes(root);
     printLevelATNewLine(root);
 }
+
+
+35. Write a function for Binary Tree Level Order Traversal
+
+Solution :
+
+// cpp
+
+vector<vector<int>> levelOrder(TreeNode* root) {
+	if(root == NULL){
+	    return {};
+	}
+	 vector<vector<int>>ans;
+	queue<TreeNode*>pending;
+	TreeNode *temp = NULL;
+	pending.push(root);
+	int length;
+	while(!pending.empty()){
+	    length = pending.size();
+	    vector<int>v;
+	    for(int i=0;i<length;i++)
+	    {
+		temp = pending.front();
+		pending.pop();
+		v.push_back(temp->val);
+		if(temp->left !=NULL){
+		    pending.push(temp->left);
+		}
+		 if(temp->right !=NULL){
+		    pending.push(temp->right);
+		}
+	    }
+	    ans.push_back(v);
+	}
+	return ans;
+}
