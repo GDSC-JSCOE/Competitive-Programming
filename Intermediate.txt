@@ -1672,4 +1672,17 @@ vector<vector<int>> levelOrder(TreeNode* root) {
 	    ans.push_back(v);
 	}
 	return ans;
+36. Two Sum
+Solution:
+         vector<int> twoSum(vector<int>& nums, int target) {
+    int len = nums.size();
+    for(int i = 0; i < len; i++) {
+        for(int j = i + 1; j < len; j++) {
+            if(nums[j] == target - nums[i])
+                return { i, j };
+        }
+    }
+    return {-1, -1};
+};
+    
 }
