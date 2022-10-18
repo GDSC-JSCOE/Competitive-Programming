@@ -12,3 +12,10 @@
 3.Given an array A with N elements arranged in an ascending order, also given a number K.
 Check if their exist two indices such that sum of elements at those indices is equal to K. If Yes print those indices accordingly else print no answer.
 NOTE: If there are multiple such pair (i, j), print max j value pair and if all j′s are equal print min i value pair.
+
+4. print the follwing pattern using any language
+E
+D E 
+C D E 
+B C D E 
+A B C D E 
