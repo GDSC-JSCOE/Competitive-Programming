@@ -1054,3 +1054,42 @@ int main()
 	head = bubbleSort(head);
 	print(head);
 }
+
+16) An array consist of n elements.Given an integer k.
+    Write a program to find the sum of the lengths of the sub-arrays with k as its       maximum number. Any two sub-arrays that are considered should not overlap each       other. Find the maximum possible sum.
+    
+solution:  -----python-----
+
+	 def Solve(n,k,a):
+	    res =0
+	    i=0
+	    while(i<n) :
+		ncnt=0
+		bcheck = False
+		while i<n and a[i] <= k:
+		    ncnt= ncnt + 1
+		    if a[i] == k:
+			bcheck = True
+		    i = i+ 1
+
+		if bcheck =  True:
+		    res = res + ncnt
+
+		while i<n and a[i] > k:
+		    i = i+ 1
+
+	    return res
+	    
+
+	T = int(intput())
+	for _ in range(T):
+
+	    n,k = map(int , intpu().split())
+
+	    a= list(map(int,intput().split()))
+
+	    out_ = Solve(n,k,a)
+
+	    print (out_)
+        
+
