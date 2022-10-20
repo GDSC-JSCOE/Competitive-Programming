@@ -1768,3 +1768,24 @@ public class MergeSort {
 	}
 
 }
+3. Write a function that tests whether a string is a palindrome.
+Solution : 
+
+class Solution {
+    int isPalindrome(String S) {
+      char [] ans=new char[S.length()];
+      for(int i=0;i<S.length();i++){
+          ans[i]=S.charAt(i);
+      }
+      int start=0;
+      int end=S.length()-1;
+      while(start<end){
+          if(ans[start] != ans[end]){
+              return 0;
+          }
+          start++;
+          end--;
+      }
+      return 1;
+    }
+};
