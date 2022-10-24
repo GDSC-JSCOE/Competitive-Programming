@@ -1,0 +1,169 @@
+//LINEAR SEARCH IN AN UNSORTED ARRAY
+#include<stdio.h>
+int main(){
+    int arr[30];
+    int key,n;
+    printf("\nEnter the size of the array:\n");
+    scanf("%d",&n);
+    printf("\nEnter the elements:");
+    for(int i=0;i<n;i++){
+        scanf("%d",&arr[i]);
+    }
+    printf("\nThe elements you entered are:\n");
+    for(int i=0;i<n;i++){
+        printf("\t%d",arr[i]);
+    }
+    printf("\nEnter the key element that is to be searched:\n");
+    scanf("%d",&key);
+    int j=0;
+    while(j<n){
+        if(arr[j]==key){
+            printf("\nKey found at index %d",j);
+        }
+        j=j+1;
+        printf("\nElement not found\n");
+    }
+    return 0;
+}
+
+LINEAR SEARCH IN A SORTED ARRAY
+#include<stdio.h>
+int main(){
+    int arr[30];
+    int key,n;
+    printf("\nEnter the size of the array:\n");
+    scanf("%d",&n);
+    printf("\nEnter the elements:");
+    for(int i=0;i<n;i++){
+        scanf("%d",&arr[i]);
+    }
+    printf("\nThe elements you entered are:\n");
+    for(int i=0;i<n;i++){
+        printf("\t%d",arr[i]);
+    }
+    printf("\nEnter the key element that is to be searched:\n");
+    scanf("%d",&key);
+    int j=0;
+    while (j<n)
+    {    
+        if(arr[j]==key){
+            printf("\nKey found at index %d\n",j);
+            break;
+        }
+        else{
+            j++;
+        }
+    }
+    
+    return 0;
+}
+
+saving the number of comparisons
+#include<stdio.h>
+int main(){
+    int arr[30];
+    int key,n;
+    printf("\nEnter the size of the array:\n");
+    scanf("%d",&n);
+    printf("\nEnter the elements:");
+    for(int i=0;i<n;i++){
+        scanf("%d",&arr[i]);
+    }
+    printf("\nThe elements you entered are:\n");
+    for(int i=0;i<n;i++){
+        printf("\t%d",arr[i]);
+    }
+    printf("\nEnter the key element that is to be searched:\n");
+    scanf("%d",&key);
+    int j=0;
+    if(key<arr[n-1]){
+        while (j<n)
+    {    
+        if(arr[j]==key){
+            printf("\nKey found at index %d\n",j);
+            break;
+        }
+        else{
+            j++;
+        }
+    }
+    }
+    else{
+        printf("\nKey not found\n");
+    }
+    return 0;
+}
+
+BINARY SEARCH RECURSIVE(can only be applied on sorted elements)
+#include<stdio.h>
+void binarySearch(int key,int l,int u,int arr[]){
+    int mid=(l+u)/2;
+    if(key==arr[mid]){
+        printf("\nKey found at index:%d",mid);
+    }
+    else if(key<arr[mid]){
+        u=mid-1;
+        binarySearch(key,l,u,arr);
+    }
+    else{
+        l=mid+1;
+        binarySearch(key,l,u,arr);
+    }
+}
+int main(){
+    int arr[30];
+    int key,n,l,u;
+    printf("\nEnter the size of the array:\n");
+    scanf("%d",&n);
+    printf("\nEnter the elements:");
+    for(int i=0;i<n;i++){
+        scanf("%d",&arr[i]);
+    }
+    printf("\nThe elements you entered are:\n");
+    for(int i=0;i<n;i++){
+        printf("\t%d",arr[i]);
+    }
+    printf("\nEnter the key element that is to be searched:\n");
+    scanf("%d",&key);
+    l=0,u=n-1;
+    binarySearch(key,l,u,arr);
+    return 0;
+}
+
+
+BINARY SEARCH NONRECURSIVE(can only be applied on sorted elements)
+#include<stdio.h>
+void binarySearch(int arr[],int n,int key){
+    int l,u,mid;
+    l=0;u=n-1;
+    while(l<=u){
+        mid=(l+u)/2;
+        if(arr[mid]==key){
+            printf("\nKey found\n");
+            break;
+        }
+        else if(arr[mid]>key){
+            u=mid-1;
+        }
+        else{
+            l=mid+1;
+        }
+    }
+}
+
+int main(){
+    int arr[10],n,key;
+    printf("\nEnter the size of the array:\n");
+    scanf("%d",&n);
+    printf("\nEnter the elements of the array:\n");
+    for(int i=0;i<n;i++){
+        scanf("%d",&arr[i]);
+    }
+    printf("\nEnter the key you want to search:\n");
+    scanf("%d",&key);
+    binarySearch(arr,n,key);
+    return 0;
+}
+
+
+
