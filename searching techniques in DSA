@@ -1,5 +1,6 @@
 //LINEAR SEARCH IN AN UNSORTED ARRAY
 #include<stdio.h>
+#include<stdlib.h>
 int main(){
     int arr[30];
     int key,n;
@@ -26,7 +27,7 @@ int main(){
     return 0;
 }
 
-LINEAR SEARCH IN A SORTED ARRAY
+//LINEAR SEARCH IN A SORTED ARRAY
 #include<stdio.h>
 int main(){
     int arr[30];
@@ -58,7 +59,7 @@ int main(){
     return 0;
 }
 
-saving the number of comparisons
+//Saving the number of comparisons
 #include<stdio.h>
 int main(){
     int arr[30];
@@ -94,7 +95,7 @@ int main(){
     return 0;
 }
 
-BINARY SEARCH RECURSIVE(can only be applied on sorted elements)
+//BINARY SEARCH RECURSIVE(can only be applied on sorted elements)
 #include<stdio.h>
 void binarySearch(int key,int l,int u,int arr[]){
     int mid=(l+u)/2;
@@ -131,7 +132,7 @@ int main(){
 }
 
 
-BINARY SEARCH NONRECURSIVE(can only be applied on sorted elements)
+//BINARY SEARCH NONRECURSIVE(can only be applied on sorted elements)
 #include<stdio.h>
 void binarySearch(int arr[],int n,int key){
     int l,u,mid;
