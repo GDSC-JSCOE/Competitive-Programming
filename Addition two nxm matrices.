@@ -1,5 +1,6 @@
 //ADDITION OF TWO MATRICES:
     #include<stdio.h>
+    #include<stdlib.h>
     void main(){
         int n,m;
         printf("\nEnter the size of matrix:\n");
