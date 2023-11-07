@@ -1092,4 +1092,30 @@ solution:  -----python-----
 
 	    print (out_)
         
+17) There is a robot on an m x n grid. The robot is initially located at the top-left corner (i.e., grid[0][0]). The robot tries to move to the bottom-right corner (i.e., grid[m - 1][n - 1]). The robot can only move either down or right at any point in time.
+
+    Given the two integers m and n, return the number of possible unique paths that the robot can take to reach the bottom-right corner.
+
+solution : -------Java-------
+
+class Solution {
+    public int findPath(int i,int j, int m,int n,int[][] dp){
+        if(i==(n-1) && j==(m-1)) return 1;
+        if(i>=n || j>=m) return 0;
+        if(dp[i][j]!=-1)return dp[i][j];
+        return dp[i][j]=findPath(i,j+1,m,n,dp)+findPath(i+1,j,m,n,dp);
+    }
+    public int uniquePaths(int m, int n) {
+        int[][] dp = new int[n][m];
+        for(int[] row : dp){
+            Arrays.fill(row,-1);
+        }
+        return findPath(0,0,m,n,dp);
+    }
+    public static void main(String[] args) {
+            int m = 3;
+            int n = 7;
+            System.out.println(uniquePaths(m,n));
+        }
+}
 
